@@ -77,9 +77,7 @@ namespace BluDay.Common.DependencyInjection
             {
                 BluValidator.NotNull(provider, nameof(provider));
 
-                object[] dependencies = null;
-
-                dependencies = new object[resolvers.Count];
+                var dependencies = new object[resolvers.Count];
 
                 for (int i = 0; i < resolvers.Count; i++)
                 {
