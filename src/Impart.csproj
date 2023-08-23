@@ -239,7 +239,7 @@
     <Compile Include="BluDay.Common\Services\IBluFilePickerService.cs" />
     <Compile Include="BluDay.Impart\ImpartCore.cs" />
     <Compile Include="BluDay.Common\Services\IBluNavigationService.cs" />
-    <Compile Include="BluDay.Common\Services\Infrastructure\Service.cs" />
+    <Compile Include="BluDay.Common\Services\Infrastructure\BluService.cs" />
     <Compile Include="BluDay.Common\Services\IBluNotificationService.cs" />
     <Compile Include="BluDay.Impart\Services\IImpartSampleDataService.cs" />
     <Compile Include="BluDay.Impart\Services\IImpartUserService.cs" />
@@ -254,12 +254,12 @@
     <Compile Include="BluDay.Common\Services\BluWindowService.cs" />
     <Compile Include="BluDay.Impart\Models\ChatModel.cs" />
     <Compile Include="BluDay.Common\Domain\Models\IBluModel.cs" />
-    <Compile Include="BluDay.Common\Domain\Models\Model.cs" />
+    <Compile Include="BluDay.Common\Domain\Models\BluModel.cs" />
     <Compile Include="BluDay.Impart\Models\MessageModel.cs" />
     <Compile Include="BluDay.Impart\Models\UserModel.cs" />
     <Compile Include="BluDay.Impart\ViewModels\ChatViewModel.cs" />
     <Compile Include="BluDay.Common\Domain\ViewModels\IBluViewModel.cs" />
-    <Compile Include="BluDay.Common\Domain\ViewModels\ViewModel.cs" />
+    <Compile Include="BluDay.Common\Domain\ViewModels\BluViewModel.cs" />
     <Compile Include="BluDay.Impart\ViewModels\MainViewModel.cs" />
     <Compile Include="BluDay.Impart\ViewModels\SettingsViewModel.cs" />
     <Compile Include="BluDay.Impart\ViewModels\SetupViewModel.cs" />

@@ -1,6 +1,6 @@
 ﻿namespace BluDay.Impart.ViewModels
 {
-    public sealed class ShellViewModel : Common.Domain.ViewModels.ViewModel
+    public sealed class ShellViewModel : Common.Domain.ViewModels.BluViewModel
     {
         private string _title;
 

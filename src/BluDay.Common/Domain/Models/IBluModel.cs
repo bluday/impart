@@ -2,7 +2,7 @@
 
 namespace BluDay.Common.Domain.Models
 {
-    public interface IBluModel : IEquatable<Model>
+    public interface IBluModel : IEquatable<BluModel>
     {
         Guid Id { get; set; }
 

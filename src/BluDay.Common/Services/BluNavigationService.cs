@@ -9,7 +9,7 @@ using Windows.UI.Xaml;
 
 namespace BluDay.Common.Services
 {
-    public sealed class BluNavigationService : Service, IBluNavigationService
+    public sealed class BluNavigationService : BluService, IBluNavigationService
     {
         private readonly Dictionary<BluViewInfo, BluNavigationContext> _contextsMap =
             new Dictionary<BluViewInfo, BluNavigationContext>();

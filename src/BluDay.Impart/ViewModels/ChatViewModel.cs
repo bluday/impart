@@ -9,7 +9,7 @@ using Windows.Storage;
 
 namespace BluDay.Impart.ViewModels
 {
-    public sealed class ChatViewModel : Common.Domain.ViewModels.ViewModel
+    public sealed class ChatViewModel : Common.Domain.ViewModels.BluViewModel
     {
         private string _inputText;
 

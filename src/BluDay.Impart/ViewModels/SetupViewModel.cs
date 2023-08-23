@@ -1,6 +1,6 @@
 ﻿namespace BluDay.Impart.ViewModels
 {
-    public sealed class SetupViewModel : Common.Domain.ViewModels.ViewModel
+    public sealed class SetupViewModel : Common.Domain.ViewModels.BluViewModel
     {
         private string _username;
 

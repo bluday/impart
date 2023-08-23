@@ -4,7 +4,7 @@ using BluDay.Impart.Events;
 
 namespace BluDay.Impart.Services
 {
-    public class ImpartUserService : Service, IImpartUserService
+    public class ImpartUserService : BluService, IImpartUserService
     {
         private Models.UserModel _currentUser;
 

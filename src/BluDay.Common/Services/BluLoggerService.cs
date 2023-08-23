@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BluDay.Common.Services
 {
-    public sealed class BluLoggerService : Service, IBluLoggerService
+    public sealed class BluLoggerService : BluService, IBluLoggerService
     {
         private readonly HashSet<IBluLogger> _loggers = new HashSet<IBluLogger>();
 

@@ -2,7 +2,7 @@
 
 namespace BluDay.Common.Services
 {
-    public sealed class BluNotificationService : Service, IBluNotificationService
+    public sealed class BluNotificationService : BluService, IBluNotificationService
     {
         public int DefaultDuration { get; set; } = BluConstants.DEFAULT_NOTIFICATION_DURATION;
 

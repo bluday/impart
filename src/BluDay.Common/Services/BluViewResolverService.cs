@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace BluDay.Common.Services
 {
-    public sealed class BluViewResolverService : Service, IBluViewResolverService
+    public sealed class BluViewResolverService : BluService, IBluViewResolverService
     {
         private readonly Dictionary<Type, Func<UI.IBluView>> _resolvers =
             new Dictionary<Type, Func<UI.IBluView>>();

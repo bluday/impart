@@ -3,7 +3,7 @@ using BluDay.Common.Events;
 
 namespace BluDay.Common.Services
 {
-    public sealed class BluActivationService : Service, IBluActivationService
+    public sealed class BluActivationService : BluService, IBluActivationService
     {
         public bool Activated { get; private set; }
 

@@ -10,7 +10,7 @@ using System.Windows.Input;
 
 namespace BluDay.Impart.ViewModels
 {
-    public sealed class MainViewModel : Common.Domain.ViewModels.ViewModel
+    public sealed class MainViewModel : Common.Domain.ViewModels.BluViewModel
     {
         private string _header;
 

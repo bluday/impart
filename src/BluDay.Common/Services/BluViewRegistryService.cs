@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace BluDay.Common.Services
 {
-    public class BluViewRegistryService : Service, IBluViewRegistryService
+    public class BluViewRegistryService : BluService, IBluViewRegistryService
     {
         private readonly List<BluView> _views = new List<BluView>();
 

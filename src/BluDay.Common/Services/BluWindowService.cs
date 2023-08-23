@@ -6,7 +6,7 @@ using Windows.UI.Xaml;
 
 namespace BluDay.Common.Services
 {
-    public sealed class BluWindowService : Service, IBluWindowService
+    public sealed class BluWindowService : BluService, IBluWindowService
     {
         public bool Activated { get; private set; }
 
@@ -64,7 +64,7 @@ namespace BluDay.Common.Services
 
             Logger.LogInfo("Activating window...");
 
-            Window.Activate();
+            // Window.Activate();
         }
 
         public void Close()

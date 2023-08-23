@@ -3,7 +3,7 @@ using BluDay.Common.Services;
 
 namespace BluDay.Impart.ViewModels
 {
-    public sealed class SettingsViewModel : Common.Domain.ViewModels.ViewModel
+    public sealed class SettingsViewModel : Common.Domain.ViewModels.BluViewModel
     {
         private string _version;
 

@@ -7,7 +7,7 @@ using Windows.UI.Xaml.Media;
 
 namespace BluDay.Impart.Models
 {
-    public sealed class ChatModel : Common.Domain.Models.Model
+    public sealed class ChatModel : Common.Domain.Models.BluModel
     {
         private bool _isGroup;
 

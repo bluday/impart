@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace BluDay.Impart.Services
 {
-    public class ImpartChatService : Service, IImpartChatService
+    public class ImpartChatService : BluService, IImpartChatService
     {
         private ChatModel _currentChat;
 

@@ -2,7 +2,7 @@
 
 namespace BluDay.Impart.ViewModels
 {
-    public sealed class UserViewModel : Common.Domain.ViewModels.ViewModel
+    public sealed class UserViewModel : Common.Domain.ViewModels.BluViewModel
     {
         private string _displayName, _username;
 

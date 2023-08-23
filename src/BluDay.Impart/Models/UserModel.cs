@@ -6,7 +6,7 @@ using Windows.UI.Xaml.Media;
 
 namespace BluDay.Impart.Models
 {
-    public sealed class UserModel : Common.Domain.Models.Model
+    public sealed class UserModel : Common.Domain.Models.BluModel
     {
         private string
             _avatarImageUrl,

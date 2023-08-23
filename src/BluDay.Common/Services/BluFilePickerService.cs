@@ -6,7 +6,7 @@ using Windows.Storage;
 
 namespace BluDay.Common.Services
 {
-    public sealed class BluFilePickerService : Service, IBluFilePickerService
+    public sealed class BluFilePickerService : BluService, IBluFilePickerService
     {
         public IReadOnlyList<string> AllowedFileTypes { get; }
 

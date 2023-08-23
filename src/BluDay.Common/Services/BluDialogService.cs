@@ -5,7 +5,7 @@ using Windows.UI.Xaml.Controls;
 
 namespace BluDay.Common.Services
 {
-    public sealed class BluDialogService : Service, IBluDialogService
+    public sealed class BluDialogService : BluService, IBluDialogService
     {
         public BluDialogService(IBluCommonServices commonServices) : base(commonServices) { }
 

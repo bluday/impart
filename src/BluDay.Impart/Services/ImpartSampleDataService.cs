@@ -8,7 +8,7 @@ using Windows.UI.Xaml;
 
 namespace BluDay.Impart.Services
 {
-    public sealed class ImpartSampleDataService : Service, IImpartSampleDataService
+    public sealed class ImpartSampleDataService : BluService, IImpartSampleDataService
     {
         public int CurrentUserIndex { get; } = -1;
 

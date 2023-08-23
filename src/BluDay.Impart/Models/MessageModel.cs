@@ -1,6 +1,6 @@
 ﻿namespace BluDay.Impart.Models
 {
-    public sealed class MessageModel : Common.Domain.Models.Model
+    public sealed class MessageModel : Common.Domain.Models.BluModel
     {
         private bool _read;
 
