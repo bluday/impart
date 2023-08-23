@@ -1,0 +1,51 @@
+﻿<!-- ( 0 _ o ) -->
+<Application
+    x:Class="BluDay.Impart.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:converters="using:BluDay.Common.UI.Xaml.Converters"
+    RequestedTheme="Dark">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls"/>
+
+                <ResourceDictionary Source="BluDay.Common/UI/Xaml/Styles/BluChatMessageBubbleStyle.xaml"/>
+                <ResourceDictionary Source="BluDay.Common/UI/Xaml/Styles/ContentControlStyle.xaml"/>
+                <ResourceDictionary Source="BluDay.Common/UI/Xaml/Styles/NavigationViewStyle.xaml"/>
+                <ResourceDictionary Source="BluDay.Common/UI/Xaml/Styles/PersonPictureStyle.xaml"/>
+                <ResourceDictionary Source="BluDay.Common/UI/Xaml/Styles/UserControlStyle.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+            <!-- Colors --> 
+            <Color x:Key="SystemAccentColor">CornflowerBlue</Color>
+            <Color x:Key="SystemAccentColorLight2">CornflowerBlue</Color>
+
+            <!-- Brushes -->
+            <AcrylicBrush
+                x:Key="AcrylicBackgroundBrush"
+                BackgroundSource="HostBackdrop"
+                FallbackColor="#222"
+                TintColor="#222"
+                TintOpacity="1"/>
+            
+            <!-- Images -->
+            <ImageSource x:Key="BluTitleBarIcon">
+                Assets/Square44x44Logo.scale-200.png
+            </ImageSource>
+            
+            <ImageSource x:Key="DeliciousBlueberriesImage">
+                Assets/StoreLogo.scale-400.png
+            </ImageSource>
+            
+            <!-- Converters -->
+            <converters:BooleanInverterConverter x:Key="BooleanInverterConverter"/>
+            <converters:DateTimeFormatConverter x:Key="DateTimeFormatConverter"/>
+
+            <!-- Transition collections -->
+            <TransitionCollection x:Key="PageTransitionCollection">
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

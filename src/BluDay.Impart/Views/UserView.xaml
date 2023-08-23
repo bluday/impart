@@ -1,0 +1,79 @@
+﻿<UserControl
+    x:Class="BluDay.Impart.Views.UserView"
+    ui:BluViewContext.ViewModel="viewModels:UserViewModel"
+    mc:Ignorable="d"
+    d:DataContext="{d:DesignInstance Type=viewModels:UserViewModel}"
+    d:RequestedTheme="Dark"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:BluDay.Common.UI.Xaml.Controls"
+    xmlns:ui="using:BluDay.Common.UI.Xaml"
+    xmlns:viewModels="using:BluDay.Impart.ViewModels">
+    <ScrollViewer CornerRadius="7,0,0,0" d:Background="{ThemeResource NavigationViewContentBackground}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid Height="300">
+                <Grid Height="150" VerticalAlignment="Top">
+                    <Image
+                        Stretch="UniformToFill"
+                        Source="{Binding BackgroundImage}"
+                        d:Source="https://images5.alphacoders.com/686/686331.jpg"/>
+                    
+                    <Grid Background="#22999999"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.RenderTransform>
+                        <CompositeTransform TranslateY="75"/>
+                    </Grid.RenderTransform>
+                    
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="10"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <controls:BluUserAvatar
+                        Height="150"
+                        Width="150"
+                        Avatar="{Binding Avatar}"
+                        d:Avatar="https://avatarfiles.alphacoders.com/535/53514.jpg"/>
+
+                    <StackPanel Grid.Row="2">
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="28"
+                            FontWeight="SemiBold"
+                            Text="{Binding DisplayName, FallbackValue='Display name'}"
+                            d:Text="Faith Connors"/>
+
+                        <TextBlock
+                            Foreground="Gray"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="16"
+                            FontWeight="Normal"
+                            Text="{Binding Username, FallbackValue='Username'}"
+                            d:Text="notaleech2016"/>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+            <Grid x:Name="UserContentGrid" Grid.Row="1" Padding="20">
+                <Button
+                    Content="Log out"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Setup"/>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

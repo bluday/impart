@@ -1,0 +1,31 @@
+{
+  "AppInfo": {
+    "Author": "BluDay",
+    "Version": "1.0",
+    "Website": "https://github.com/BluDay/Impart"
+  },
+  "LoggerFormat": "{DateTime:yyyy-MM-dd HH:mm:ss.fff} [{Level,-7}] ({Name}) {Message}{NewLine}{Content}",
+  "PreloadEventTopics": true,
+  "PreloadNavigationContexts": true,
+  "DefaultView": "Setup",
+  "ViewHierarchySections": [
+    {
+      "Parent": "Shell",
+      "Children": ["Main", "Setup"]
+    },
+    {
+      "Parent": "Main",
+      "Children": ["Chat", "User", "Settings"]
+    }
+  ],
+  "ViewHierarchies": "Shell > (Main > Chat, User, Settings), Setup",
+  "AllowedFilePickerFileTypes": [
+    ".exe",
+    ".jpg",
+    ".mp3",
+    ".png",
+    ".txt"
+  ],
+  "DefaultNotificationDuration": 2000,
+  "SampleDataUserIndex": 0
+}
