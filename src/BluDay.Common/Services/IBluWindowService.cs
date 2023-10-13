@@ -2,10 +2,6 @@
 {
     public interface IBluWindowService
     {
-        bool Activated { get; }
-
-        void Activate();
-
-        void Close();
+        bool MainWindowIsActivated { get; }
     }
 }
