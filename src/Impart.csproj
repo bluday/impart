@@ -381,11 +381,10 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\config.json">
+    <None Include="config.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      <Link>config.json</Link>
     </None>
-    <None Include="..\db.json">
+    <None Include="db.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
