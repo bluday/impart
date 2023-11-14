@@ -4,10 +4,6 @@ namespace BluDay.Impart
     {
         Common.BluAppInfo AppInfo { get; }
 
-        bool PreloadEventTopics { get; }
-
-        bool PreloadNavigationContexts { get; }
-
         int NotificationDuration { get; }
         
         int SampleDataUserIndex { get; }

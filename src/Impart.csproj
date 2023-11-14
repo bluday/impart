@@ -232,13 +232,13 @@
     <Compile Include="BluDay.Impart\Services\ImpartChatService.cs" />
     <Compile Include="BluDay.Common\Services\BluCommonServices.cs" />
     <Compile Include="BluDay.Common\Services\BluDialogService.cs" />
-    <Compile Include="BluDay.Common\Messaging\BluEventAggregator.cs" />
+    <Compile Include="BluDay.Common\Services\BluEventService.cs" />
     <Compile Include="BluDay.Common\Services\BluFilePickerService.cs" />
     <Compile Include="BluDay.Common\Services\IBluActivationService.cs" />
     <Compile Include="BluDay.Impart\Services\IImpartChatService.cs" />
     <Compile Include="BluDay.Common\Services\IBluCommonServices.cs" />
     <Compile Include="BluDay.Common\Services\IBluDialogService.cs" />
-    <Compile Include="BluDay.Common\Messaging\IBluEventAggregator.cs" />
+    <Compile Include="BluDay.Common\Services\IBluEventService.cs" />
     <Compile Include="BluDay.Common\Services\IBluFilePickerService.cs" />
     <Compile Include="BluDay.Impart\ImpartCore.cs" />
     <Compile Include="BluDay.Common\Services\IBluNavigationService.cs" />

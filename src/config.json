@@ -5,8 +5,6 @@
     "Website": "https://github.com/BluDay/Impart"
   },
   "LoggerFormat": "{DateTime:yyyy-MM-dd HH:mm:ss.fff} [{Level,-7}] ({Name}) {Message}{NewLine}{Content}",
-  "PreloadEventTopics": true,
-  "PreloadNavigationContexts": true,
   "DefaultView": "Setup",
   "ViewHierarchySections": [
     {

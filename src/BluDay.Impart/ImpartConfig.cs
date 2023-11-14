@@ -8,10 +8,6 @@ namespace BluDay.Impart
     {
         public BluAppInfo AppInfo { get; }
 
-        public bool PreloadEventTopics { get; }
-
-        public bool PreloadNavigationContexts { get; }
-
         public int NotificationDuration { get; }
         
         public int SampleDataUserIndex { get; }
@@ -30,8 +26,6 @@ namespace BluDay.Impart
 
             // Gotta deal with this mess soon.
             AppInfo                    = config.AppInfo;
-            PreloadEventTopics         = config.PreloadEventTopics;
-            PreloadNavigationContexts  = config.PreloadNavigationContexts;
             NotificationDuration       = config.NotificationDuration;
             SampleDataUserIndex        = config.SampleDataUserIndex;
             DefaultView                = config.DefaultView;
@@ -43,8 +37,6 @@ namespace BluDay.Impart
         [System.Text.Json.Serialization.JsonConstructor]
         public ImpartConfig(
             BluAppInfo                    appInfo,
-            bool                          preloadEventTopics,
-            bool                          preloadNavigationContexts,
             int                           notificationDuration,
             int                           sampleDataUserIndex,
             string                        defaultView,
@@ -54,8 +46,6 @@ namespace BluDay.Impart
         {
             // We should probably use some static object-property-updater class for this.
             AppInfo                    = appInfo;
-            PreloadEventTopics         = preloadEventTopics;
-            PreloadNavigationContexts  = preloadNavigationContexts;
             NotificationDuration       = notificationDuration;
             SampleDataUserIndex        = sampleDataUserIndex;
             DefaultView                = defaultView;
