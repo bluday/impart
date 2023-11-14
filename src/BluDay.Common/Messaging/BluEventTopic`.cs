@@ -6,8 +6,6 @@ namespace BluDay.Common.Messaging
 {
     public sealed class BluEventTopic<TEvent> : IBluEventTopic where TEvent : Events.IBluEvent
     {
-        private readonly object _sync = new object();
-
         private readonly Dictionary<object, BluEventHandler<TEvent>> _subscribersMap =
             new Dictionary<object, BluEventHandler<TEvent>>();
 
@@ -42,21 +40,7 @@ namespace BluDay.Common.Messaging
             Info = new BluEventTopicInfo(this);
         }
 
-        private Exception RaiseSubscriberEventHandler(BluEventHandler<TEvent> handler, TEvent e)
-        {
-            try
-            {
-                handler(e);
-            }
-            catch (Exception ex)
-            {
-                return ex;
-            }
-
-            return null;
-        }
-
-        private Exception[] BulkRaiseSubscriberEventHandlers(object sender, TEvent e)
+        private Exception[] RaiseHandlers(object sender, TEvent e)
         {
             BluValidator.NotNull(
                 (sender, nameof(sender)),
@@ -65,14 +49,21 @@ namespace BluDay.Common.Messaging
 
             var exceptions = new List<Exception>();
 
-            foreach (BluEventHandler<TEvent> handler in Handlers)
+            foreach (BluEventHandler<TEvent> handler in _subscribersMap.Values)
             {
                 if (handler.Target == sender)
                 {
                     continue;
                 }
 
-                exceptions.Add(RaiseSubscriberEventHandler(handler, e));
+                try
+                {
+                    handler(e);
+                }
+                catch (Exception ex)
+                {
+                    exceptions.Add(ex);
+                }
             }
 
             return exceptions.ToArray();
@@ -103,20 +94,15 @@ namespace BluDay.Common.Messaging
             return $"{Id}_{GetDefaultName()}";
         }
 
-        public BluEventInfo<TEvent> Publish(object sender, TEvent e)
+        public BluEventInfo<TEvent> Notify(object sender, TEvent e)
         {
-            BluEventInfo<TEvent> info;
-
-            lock (_sync)
-            {
-                info = new BluEventInfo<TEvent>(
-                    sender:     sender,
-                    e:          e,
-                    topic:      this,
-                    issuedAt:   DateTime.Now,
-                    exceptions: BulkRaiseSubscriberEventHandlers(sender, e)
-                );
-            }
+            var info = new BluEventInfo<TEvent>(
+                sender:     sender,
+                e:          e,
+                topic:      this,
+                issuedAt:   DateTime.Now,
+                exceptions: RaiseHandlers(sender, e)
+            );
 
             return _eventInfos.BluAddAndReturn(info);
         }

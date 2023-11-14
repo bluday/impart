@@ -79,7 +79,7 @@ namespace BluDay.Impart.ViewModels
         {
             if (CurrentChat is null) return;
 
-            Publish(new ChatLaunchRequestEvent(CurrentChat));
+            Notify(new ChatLaunchRequestEvent(CurrentChat));
         }
 
         private void OnChatLaunched(ChatLaunchedEvent e)
@@ -98,11 +98,11 @@ namespace BluDay.Impart.ViewModels
 
             if (args.Action is NotifyCollectionChangedAction.Add)
             {
-                Publish(new ChatCreatedEvent(chat));
+                Notify(new ChatCreatedEvent(chat));
             }
             else if (args.Action is NotifyCollectionChangedAction.Remove)
             {
-                Publish(new ChatDeletedEvent(chat));
+                Notify(new ChatDeletedEvent(chat));
             }
         }
 

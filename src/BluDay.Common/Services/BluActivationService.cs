@@ -13,7 +13,7 @@ namespace BluDay.Common.Services
 
         private void OnWindowActivated(WindowActivatedEvent e)
         {
-            Publish(new DefaultViewNavigationRequestEvent());
+            Notify(new DefaultViewNavigationRequestEvent());
 
             Activated = true;
 
@@ -31,7 +31,7 @@ namespace BluDay.Common.Services
 
             Arguments = arguments;
 
-            Publish(new WindowActivationRequestEvent());
+            Notify(new WindowActivationRequestEvent());
         }
     }
 }

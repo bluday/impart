@@ -88,7 +88,7 @@ namespace BluDay.Impart.Services
                 }
             }
 
-            Publish(new Events.SampleUserLoadedEvent(CurrentUser));
+            Notify(new Events.SampleUserLoadedEvent(CurrentUser));
 
             Logger.LogDebug($"Sample data loaded for user index {userIndex}.");
 

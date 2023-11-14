@@ -13,11 +13,11 @@ namespace BluDay.Impart.Services
             get => _currentUser;
             private set
             {
-                Publish(new CurrentUserUpdatingEvent(value));
+                Notify(new CurrentUserUpdatingEvent(value));
 
                 _currentUser = value;
 
-                Publish(new CurrentUserUpdatedEvent(value));
+                Notify(new CurrentUserUpdatedEvent(value));
 
                 Logger.LogDebug("Sample user set.");
             }

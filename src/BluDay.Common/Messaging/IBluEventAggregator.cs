@@ -11,10 +11,10 @@ namespace BluDay.Common.Messaging
 
         BluEventTopicInfo GetTopicInfoByPropertyValue(object value);
 
-        Task<BluEventInfo<TEvent>> PublishAsync<TEvent>(object sender, TEvent e)
+        Task<BluEventInfo<TEvent>> NotifyAsync<TEvent>(object sender, TEvent e)
             where TEvent : IBluEvent;
 
-        Task<BluEventInfo<TEvent>> PublishAsync<TEvent>(string topicName, object sender, TEvent e)
+        Task<BluEventInfo<TEvent>> NotifyAsync<TEvent>(string topicName, object sender, TEvent e)
             where TEvent : IBluEvent;
 
         Task<bool> SubscribeAsync<TEvent>(BluEventHandler<TEvent> handler)

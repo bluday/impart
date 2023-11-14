@@ -23,11 +23,11 @@ namespace BluDay.Impart.Services
                     throw new ArgumentException("Chat does not exist.");
                 }
 
-                Publish(new ChatLaunchingEvent(value));
+                Notify(new ChatLaunchingEvent(value));
 
                 _currentChat = value;
 
-                Publish(new ChatLaunchedEvent(value));
+                Notify(new ChatLaunchedEvent(value));
             }
         }
 

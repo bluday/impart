@@ -58,13 +58,13 @@ namespace BluDay.Common.Messaging
             return GetTopicByPropertyValue(value)?.Info;
         }
 
-        public Task<BluEventInfo<TEvent>> PublishAsync<TEvent>(object sender, TEvent e)
+        public Task<BluEventInfo<TEvent>> NotifyAsync<TEvent>(object sender, TEvent e)
             where TEvent : IBluEvent
         {
-            return PublishAsync(topicName: null, sender, e);
+            return NotifyAsync(topicName: null, sender, e);
         }
 
-        public Task<BluEventInfo<TEvent>> PublishAsync<TEvent>(string topicName, object sender, TEvent e)
+        public Task<BluEventInfo<TEvent>> NotifyAsync<TEvent>(string topicName, object sender, TEvent e)
             where TEvent : IBluEvent
         {
             return Task.Run(() =>
@@ -73,7 +73,7 @@ namespace BluDay.Common.Messaging
 
                 if (topic is null) return null;
 
-                BluEventInfo<TEvent> eventInfo = topic.Publish(sender, e);
+                BluEventInfo<TEvent> eventInfo = topic.Notify(sender, e);
 
                 _logger.LogDebug($"Publication to topic \"{topic.Name}\" complete.");
 

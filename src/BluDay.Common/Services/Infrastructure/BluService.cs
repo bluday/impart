@@ -23,14 +23,14 @@ namespace BluDay.Common.Services
             RegisterEventHandlers();
         }
 
-        protected void Publish<TEvent>(TEvent e) where TEvent : IBluEvent
+        protected void Notify<TEvent>(TEvent e) where TEvent : IBluEvent
         {
-            EventAggregator?.PublishAsync(this, e);
+            EventAggregator?.NotifyAsync(this, e);
         }
 
-        protected void Publish<TEvent>(string topicName, TEvent e) where TEvent : IBluEvent
+        protected void Notify<TEvent>(string topicName, TEvent e) where TEvent : IBluEvent
         {
-            EventAggregator?.PublishAsync(topicName, this, e);
+            EventAggregator?.NotifyAsync(topicName, this, e);
         }
 
         protected void Subscribe<TEvent>(BluEventHandler<TEvent> handler)

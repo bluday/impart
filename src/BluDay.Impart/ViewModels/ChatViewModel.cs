@@ -49,11 +49,11 @@ namespace BluDay.Impart.ViewModels
 
             if (args.Action is NotifyCollectionChangedAction.Add)
             {
-                Publish(new MessageSentEvent(message));
+                Notify(new MessageSentEvent(message));
             }
             else if (args.Action is NotifyCollectionChangedAction.Remove)
             {
-                Publish(new MessageDeletedEvent(message));
+                Notify(new MessageDeletedEvent(message));
             }
 
             OnPropertyChanged(string.Empty);
@@ -88,7 +88,7 @@ namespace BluDay.Impart.ViewModels
 
             Chat.Messages.CollectionChanged += Messages_CollectionChanged;
 
-            Publish(new ChatLaunchedEvent(Chat));
+            Notify(new ChatLaunchedEvent(Chat));
 
             if (Chat.UnreadCount > 0)
             {
