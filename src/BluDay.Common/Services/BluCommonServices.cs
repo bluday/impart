@@ -1,17 +1,15 @@
-﻿using BluDay.Common.Messaging;
-
-namespace BluDay.Common.Services
+﻿namespace BluDay.Common.Services
 {
     public sealed class BluCommonServices : IBluCommonServices
     {
-        public IBluEventAggregator EventAggregator { get; }
+        public IBluEventService EventService { get; }
 
         public IBluLoggerService LoggerService { get; }
 
-        public BluCommonServices(IBluEventAggregator eventAggregator, IBluLoggerService loggerService)
+        public BluCommonServices(IBluEventService eventService, IBluLoggerService loggerService)
         {
-            EventAggregator = eventAggregator;
-            LoggerService   = loggerService;
+            EventService  = eventService;
+            LoggerService = loggerService;
         }
     }
 }

@@ -2,7 +2,6 @@
 using BluDay.Common.DependencyInjection.Extensions;
 using BluDay.Common.Extensions;
 using BluDay.Common.Logging;
-using BluDay.Common.Messaging;
 using BluDay.Common.Services;
 using BluDay.Impart.Services;
 
@@ -33,8 +32,8 @@ namespace BluDay.Impart
         {
             return new BluServiceCollection()
                 // Singletons.
-                .AddSingleton<IBluEventAggregator,      BluEventAggregator>()
                 .AddSingleton<IBluActivationService,    BluActivationService>()
+                .AddSingleton<IBluEventService,         BluEventService>()
                 .AddSingleton<IBluLoggerService,        BluLoggerService>()
                 .AddSingleton<IBluNavigationService,    BluNavigationService>()
                 .AddSingleton<IBluViewRegistryService,  BluViewRegistryService>()

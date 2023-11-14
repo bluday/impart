@@ -10,7 +10,7 @@ namespace BluDay.Common.Domain.ViewModels
     {
         protected Logging.IBluLogger Logger { get; }
 
-        protected IBluEventAggregator EventAggregator { get; }
+        protected IBluEventService EventService { get; }
 
         protected IBluNavigationService NavigationService { get; }
 
@@ -24,7 +24,7 @@ namespace BluDay.Common.Domain.ViewModels
         {
             Logger = commonServices?.LoggerService.Create(target: this);
 
-            EventAggregator = commonServices?.EventAggregator;
+            EventService = commonServices?.EventService;
 
             NavigateCommand = new BluCommand(Navigate, CanNavigate);
 
@@ -51,41 +51,41 @@ namespace BluDay.Common.Domain.ViewModels
 
         protected void Notify<TEvent>(TEvent e) where TEvent : IBluEvent
         {
-            EventAggregator?.NotifyAsync(this, e);
+            EventService?.NotifyAsync(this, e);
         }
 
         protected void Notify<TEvent>(string topicName, TEvent e) where TEvent : IBluEvent
         {
-            EventAggregator?.NotifyAsync(topicName, this, e);
+            EventService?.NotifyAsync(topicName, this, e);
         }
 
         protected void Subscribe<TEvent>(BluEventHandler<TEvent> handler)
             where TEvent : IBluEvent
         {
-            EventAggregator?.SubscribeAsync(handler);
+            EventService?.SubscribeAsync(handler);
         }
 
         protected void Subscribe<TEvent>(string topicName, BluEventHandler<TEvent> handler)
             where TEvent : IBluEvent
         {
-            EventAggregator?.SubscribeAsync(topicName, handler);
+            EventService?.SubscribeAsync(topicName, handler);
         }
 
         protected void Unsubscribe()
         {
-            EventAggregator?.UnsubscribeAsync(this);
+            EventService?.UnsubscribeAsync(this);
         }
 
         protected void Unsubscribe<TEvent>(BluEventHandler<TEvent> handler)
             where TEvent : IBluEvent
         {
-            EventAggregator?.UnsubscribeAsync(handler);
+            EventService?.UnsubscribeAsync(handler);
         }
 
         protected void Unsubscribe<TEvent>(string topicName, BluEventHandler<TEvent> handler)
             where TEvent : IBluEvent
         {
-            EventAggregator?.UnsubscribeAsync(topicName, handler);
+            EventService?.UnsubscribeAsync(topicName, handler);
         }
 
         protected virtual void ConfigureCommands() { }

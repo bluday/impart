@@ -2,7 +2,7 @@
 {
     public interface IBluCommonServices
     {
-        Messaging.IBluEventAggregator EventAggregator { get; }
+        IBluEventService EventService { get; }
 
         IBluLoggerService LoggerService { get; }
     }
