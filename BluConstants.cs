@@ -30,13 +30,13 @@
 
         public const string DEFAULT_CONFIG_PATH = "config.json";
 
-        public const string DEFAULT_LOGGER_FORMAT = "{DateTime:yyyy-MM-dd HH:mm:ss.fff} [{Level,-7}] {Message}{NewLine}{Content}";
+        public const string DEFAULT_LOGGER_RAW_FORMAT = "{DateTime:yyyy-MM-dd HH:mm:ss.fff} [{Level,-7}] {Message}{NewLine}{Content}";
 
         public const string FILE_EXTENSION_JSON = ".json";
 
         public const string FILE_EXTENSION_YAML = ".yml";
 
-        public const string LOGGER_FORMAT_REGEX_PATTERN = @"\{([a-zA-Z0-9]+)((:([a-zA-Z0-9-._\s:]+)))?\}*";
+        public const string LOGGER_RAW_FORMAT_REGEX_PATTERN = @"\{([a-zA-Z0-9]+)((:([a-zA-Z0-9-._\s:]+)))?\}*";
 
         public const string PRINTABLE_LIST_OUTER_FORMAT = "{{\n{0}\n}}";
 

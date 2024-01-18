@@ -67,12 +67,12 @@ namespace BluDay.Common.UI.Xaml.Controls
 
         private void TextBox_KeyUp(object sender, KeyRoutedEventArgs args)
         {
-            args.Handled = Keyboard.IsShiftDown || args.Key != VirtualKey.Enter;
+            args.Handled = BluInputHelper.IsShiftDown || args.Key != VirtualKey.Enter;
         }
 
         private void TextBox_PreviewKeyDown(object sender, KeyRoutedEventArgs args)
         {
-            args.Handled = !Keyboard.IsShiftDown && args.Key == VirtualKey.Enter;
+            args.Handled = !BluInputHelper.IsShiftDown && args.Key == VirtualKey.Enter;
         }
     }
 }

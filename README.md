@@ -1,3 +1,3 @@
-# Impart
+# Impart 🫐
 
-## 🫐
+Project status: Suspended.
