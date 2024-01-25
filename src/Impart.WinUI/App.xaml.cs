@@ -9,6 +9,8 @@ public sealed partial class App : Application
 
     public IServiceProvider ServiceProvider { get; }
 
+    public string? LaunchArgs { get; private set; }
+
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
@@ -37,6 +39,8 @@ public sealed partial class App : Application
     /// <param name="args">Details about the launch request and process.</param>
     protected override void OnLaunched(LaunchActivatedEventArgs args)
     {
+        LaunchArgs = args.Arguments;
+
         _mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
 
         _mainWindow.Activate();
