@@ -1,4 +1,4 @@
-namespace Impart.WinUI;
+namespace Impart.WinUI.Controls;
 
 /// <summary>
 /// An empty window that can be used on its own or navigated to within a Frame.
