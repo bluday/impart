@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Impart", "Impart.shproj", "{BE650113-8010-4A08-BB99-B3EA6FD1C12C}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Impart", ".\Impart\Impart.shproj", "{BE650113-8010-4A08-BB99-B3EA6FD1C12C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impart.WinUI", "..\Impart.WinUI\Impart.WinUI.csproj", "{0C968C02-4347-46D8-9DA7-F832B3F60652}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Impart.WinUI", ".\Impart.WinUI\Impart.WinUI.csproj", "{0C968C02-4347-46D8-9DA7-F832B3F60652}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
