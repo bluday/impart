@@ -7,10 +7,6 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:viewModels="using:Impart.Core.Domain.ViewModels"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <Page.DataContext>
-        <viewModels:IntroductionViewModel/>
-    </Page.DataContext>
-    
     <Grid>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{x:Bind}"/>
     </Grid>

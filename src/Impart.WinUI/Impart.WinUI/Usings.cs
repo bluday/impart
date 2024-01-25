@@ -2,6 +2,7 @@
 global using Impart.WinUI.Extensions;
 global using Impart.WinUI.UI;
 global using Impart.WinUI.UI.Views;
+global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.UI;
 global using Microsoft.UI.Input;
 global using Microsoft.UI.Windowing;
