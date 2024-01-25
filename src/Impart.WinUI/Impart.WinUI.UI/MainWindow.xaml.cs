@@ -1,3 +1,5 @@
+using Windows.ApplicationModel;
+
 namespace Impart.WinUI.UI;
 
 /// <summary>
@@ -32,6 +34,8 @@ public sealed partial class MainWindow : Window
 
     private void ConfigureTitleBar()
     {
+        Title = AppInfo.Current.DisplayInfo.DisplayName;
+
         ExtendsContentIntoTitleBar = true;
 
         SetTitleBar(TitleBar);
