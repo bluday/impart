@@ -12,8 +12,16 @@
     <EnableMsixTooling>true</EnableMsixTooling>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+  
   <ItemGroup>
-    <None Remove="UI\Controls\TitleBar.xaml" />
+    <Compile Remove="UI\**" />
+    <EmbeddedResource Remove="UI\**" />
+    <None Remove="UI\**" />
+    <Page Remove="UI\**" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <None Remove="Impart.WinUI.UI\Controls\TitleBar.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -40,13 +48,11 @@
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
   </ItemGroup>
+  
   <ItemGroup>
     <Page Update="Impart.WinUI.UI.Controls\TitleBar.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\" />
   </ItemGroup>
 
   <!-- 
@@ -59,4 +65,8 @@
   </PropertyGroup>
   
   <Import Project="..\Impart\Impart.projitems" Label="Shared" />
+  
+  <ItemGroup>
+    <PRIResource Remove="UI\**" />
+  </ItemGroup>
 </Project>
