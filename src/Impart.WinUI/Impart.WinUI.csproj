@@ -14,17 +14,6 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <Compile Remove="UI\**" />
-    <EmbeddedResource Remove="UI\**" />
-    <None Remove="UI\**" />
-    <Page Remove="UI\**" />
-  </ItemGroup>
-  
-  <ItemGroup>
-    <None Remove="Impart.WinUI.UI\Controls\TitleBar.xaml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
@@ -49,12 +38,6 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   
-  <ItemGroup>
-    <Page Update="Impart.WinUI.UI.Controls\TitleBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-  </ItemGroup>
-
   <!-- 
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 
     Explorer "Package and Publish" context menu entry to be enabled for this project even if 
@@ -65,8 +48,4 @@
   </PropertyGroup>
   
   <Import Project="..\Impart\Impart.projitems" Label="Shared" />
-  
-  <ItemGroup>
-    <PRIResource Remove="UI\**" />
-  </ItemGroup>
 </Project>
