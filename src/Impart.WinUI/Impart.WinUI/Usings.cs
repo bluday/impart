@@ -2,6 +2,7 @@
 global using Impart.WinUI.Extensions;
 global using Impart.WinUI.UI;
 global using Impart.WinUI.UI.Views;
+global using Impart.WinUI.UI.WindowManagement;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.UI;
 global using Microsoft.UI.Input;
@@ -14,4 +15,5 @@ global using System;
 global using System.Collections.Generic;
 global using System.Diagnostics;
 global using System.Diagnostics.CodeAnalysis;
+global using System.Linq;
 global using System.Threading.Tasks;

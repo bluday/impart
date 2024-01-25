@@ -5,9 +5,9 @@
 /// </summary>
 public sealed partial class App : Application
 {
-    private MainWindow? _mainWindow;
+    private readonly IWindowService _windowService;
 
-    public IServiceProvider ServiceProvider { get; }
+    private readonly IServiceProvider _serviceProvider;
 
     public string? LaunchArgs { get; private set; }
 
@@ -17,7 +17,9 @@ public sealed partial class App : Application
     /// </summary>
     public App()
     {
-        ServiceProvider = CreateServices();
+        _serviceProvider = CreateServices();
+
+        _windowService = _serviceProvider.GetRequiredService<IWindowService>();
 
         InitializeComponent();
     }
@@ -25,11 +27,11 @@ public sealed partial class App : Application
     private static IServiceProvider CreateServices()
     {
         return new ServiceCollection()
-            .AddSingleton<MainWindow>()
-            .AddTransient<ConversationsViewModel>()
-            .AddTransient<IntroductionViewModel>()
-            .AddTransient<MainViewModel>()
-            .AddTransient<SettingsViewModel>()
+            .AddSingleton<IWindowService, WindowService>()
+            .AddTransient<IViewModel, ConversationsViewModel>()
+            .AddTransient<IViewModel, IntroductionViewModel>()
+            .AddTransient<IViewModel, MainViewModel>()
+            .AddTransient<IViewModel, SettingsViewModel>()
             .BuildServiceProvider();
     }
 
@@ -41,8 +43,6 @@ public sealed partial class App : Application
     {
         LaunchArgs = args.Arguments;
 
-        _mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
-
-        _mainWindow.Activate();
+        // Create and activate the main window here.
     }
 }

@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Window mc:Ignorable="d"
-        x:Class="Impart.WinUI.UI.MainWindow"
+        x:Class="Impart.WinUI.UI.Controls.Shell"
         x:DefaultBindMode="OneWay"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:controls="using:Impart.WinUI.UI.Controls"
         xmlns:appModel="using:Windows.ApplicationModel"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="{x:Bind appModel:AppInfo.Current.DisplayInfo.DisplayName}">
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <Window.SystemBackdrop>
         <MicaBackdrop Kind="Base"/>
     </Window.SystemBackdrop>

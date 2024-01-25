@@ -23,7 +23,7 @@ public static class WindowExtensions
 
     public static void Resize(this AppWindow source, int size)
     {
-        source.Resize(new SizeInt32(size, size));
+        source.Resize(width: size, height: size);
     }
 
     public static void Resize(this AppWindow source, int width, int height)
