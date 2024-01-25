@@ -5,12 +5,16 @@ namespace Impart.WinUI.UI;
 /// </summary>
 public sealed partial class MainWindow : Window
 {
+    public IServiceProvider ServiceProvider { get; }
+
     public DisplayArea DisplayArea { get; }
 
     public InputNonClientPointerSource NonClientPointerSource { get; }
 
-    public MainWindow()
+    public MainWindow(IServiceProvider serviceProvider)
     {
+        ServiceProvider = serviceProvider;
+
         DisplayArea            = AppWindow.GetDisplayArea();
         NonClientPointerSource = AppWindow.GetNonClientPointerSource();
 
@@ -19,7 +23,7 @@ public sealed partial class MainWindow : Window
         ConfigureAppWindow();
         ConfigureTitleBar();
 
-        ContentFrame.Navigate<IntroductionPage>();
+        ContentFrame.Navigate<IntroductionPage>(ServiceProvider);
     }
 
     private void ConfigureAppWindow()

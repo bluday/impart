@@ -23,6 +23,7 @@ public sealed partial class App : Application
     private static IServiceProvider CreateServices()
     {
         return new ServiceCollection()
+            .AddSingleton<MainWindow>()
             .AddTransient<ConversationsViewModel>()
             .AddTransient<IntroductionViewModel>()
             .AddTransient<MainViewModel>()
@@ -36,7 +37,7 @@ public sealed partial class App : Application
     /// <param name="args">Details about the launch request and process.</param>
     protected override void OnLaunched(LaunchActivatedEventArgs args)
     {
-        _mainWindow = new();
+        _mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
 
         _mainWindow.Activate();
     }
