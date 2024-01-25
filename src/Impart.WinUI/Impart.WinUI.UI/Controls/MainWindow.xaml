@@ -6,25 +6,22 @@
         xmlns:ctrls="using:Impart.WinUI.UI.Controls"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="using:Impart.WinUI.UI.Views"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Impart">
     <Window.SystemBackdrop>
         <MicaBackdrop Kind="Base"/>
     </Window.SystemBackdrop>
     
-    <Grid>
+    <Grid x:Name="RootGrid">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <ctrls:TitleBar x:Name="TitleBar"
-                        Icon="{StaticResource AppIconImageSource}"
-                        Title="{x:Bind Title}"/>
+        <ctrls:TitleBar x:Name="TitleBar" Icon="{StaticResource AppIconImageSource}" Title="{x:Bind Title}"/>
 
-        <Grid Grid.Row="1">
-            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{x:Bind}"/>
-        </Grid>
+        <Frame x:Name="ContentFrame" SourcePageType="views:MainPage" Grid.Row="1"/>
 
         <ContentDialog Grid.RowSpan="2"/>
     </Grid>

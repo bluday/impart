@@ -36,6 +36,31 @@
     <ProjectCapability Include="Msix" />
   </ItemGroup>
   
+  <ItemGroup>
+    <None Remove="Impart.WinUI.UI\Views\ConversationsPage.xaml" />
+    <None Remove="Impart.WinUI.UI\Views\IntroductionPage.xaml" />
+    <None Remove="Impart.WinUI.UI\Views\MainPage.xaml" />
+    <None Remove="Impart.WinUI.UI\Views\SettingsPage.xaml" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Page Update="Impart.WinUI.UI\Views\MainPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Impart.WinUI.UI\Views\ConversationsPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Impart.WinUI.UI\Views\SettingsPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    
+    <Page Update="Impart.WinUI.UI\Views\IntroductionPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  
   <!-- 
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 
     Explorer "Package and Publish" context menu entry to be enabled for this project even if 
