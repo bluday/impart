@@ -23,7 +23,7 @@
 
   <ItemGroup>
     <Content Include="..\..\assets\icons\**" Label="Assets">
-      <Link>Assets\%(FileName)%(Extension)</Link>
+      <Link>Assets\Icons\%(FileName)%(Extension)</Link>
     </Content>
   </ItemGroup>
 
@@ -47,10 +47,12 @@
     <Page Update="Impart.WinUI.UI\Views\MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    
     <Page Update="Impart.WinUI.UI\Views\ConversationsPage.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
+    
     <Page Update="Impart.WinUI.UI\Views\SettingsPage.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -59,6 +61,10 @@
     <Page Update="Impart.WinUI.UI\Views\IntroductionPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </Page>
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
   
   <!-- 
