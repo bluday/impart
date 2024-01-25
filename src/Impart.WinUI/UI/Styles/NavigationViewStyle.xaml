@@ -182,10 +182,10 @@
                                 </VisualState>
                             </VisualStateGroup>
 
-                            <VisualStateGroup x:Name="BluTitleBarVisibilityGroup">
-                                <VisualState x:Name="BluTitleBarVisible"/>
+                            <VisualStateGroup x:Name="TitleBarVisibilityGroup">
+                                <VisualState x:Name="TitleBarVisible"/>
 
-                                <VisualState x:Name="BluTitleBarCollapsed">
+                                <VisualState x:Name="TitleBarCollapsed">
                                     <VisualState.Setters>
                                         <Setter Target="PaneContentGrid.Margin" Value="0,32,0,0"/>
                                     </VisualState.Setters>
