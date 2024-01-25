@@ -20,7 +20,13 @@
 
         <ctrls:TitleBar x:Name="TitleBar" Icon="{StaticResource AppIconImageSource}" Title="{x:Bind Title}"/>
 
-        <Frame x:Name="ContentFrame" Grid.Row="1"/>
+        <Frame x:Name="ContentFrame" Grid.Row="1">
+            <Frame.ContentTransitions>
+                <TransitionCollection>
+                    <NavigationThemeTransition/>
+                </TransitionCollection>
+            </Frame.ContentTransitions>
+        </Frame>
 
         <ContentDialog Grid.RowSpan="2"/>
     </Grid>
