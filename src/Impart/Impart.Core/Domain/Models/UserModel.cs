@@ -1,7 +1,5 @@
 ﻿namespace Impart.Core.Domain.Models;
 
-[UniqueModel]
-[TimestampedModel]
 public sealed class UserModel : Model
 {
     [DisallowNull]
