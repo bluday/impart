@@ -10,11 +10,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\Models\Infrastructure\Annotations\TimestampedModelAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\Models\Infrastructure\Annotations\UniqueModelAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\Infrastructure\IViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\Infrastructure\ViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\ConversationsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\IntroductionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\SettingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\MainViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\Models\Infrastructure\IModel.cs" />
-    <Resource Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\Models\Infrastructure\TimestampedModel.template" />
-    <Resource Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\Models\Infrastructure\UniqueModel.template" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\Models\UserModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\Models\Infrastructure\Model.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Usings.cs" />

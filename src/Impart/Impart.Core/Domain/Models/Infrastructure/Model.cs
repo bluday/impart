@@ -2,7 +2,7 @@
 
 public abstract class Model : IModel, IEquatable<Model>, IEqualityComparer<Model>
 {
-    public Guid Id { get; init; }
+    public Guid Id { get; init; } = Guid.NewGuid();
 
     public DateTime? CreatedAt { get; set; }
 
