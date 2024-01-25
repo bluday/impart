@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Impart.Attributes\UseViewModelAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\Infrastructure\IViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\Infrastructure\ViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.Core\Domain\ViewModels\ConversationsViewModel.cs" />

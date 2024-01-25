@@ -1,4 +1,5 @@
-﻿global using Impart.WinUI.Extensions;
+﻿global using Impart.Attributes;
+global using Impart.WinUI.Extensions;
 global using Impart.WinUI.UI;
 global using Impart.WinUI.UI.Views;
 global using Microsoft.UI;
