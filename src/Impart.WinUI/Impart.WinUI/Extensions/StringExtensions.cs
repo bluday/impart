@@ -1,4 +1,4 @@
-﻿namespace Impart.WinUI.Common.Extensions;
+﻿namespace Impart.WinUI.Extensions;
 
 public static class StringExtensions
 {

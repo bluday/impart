@@ -1,6 +1,6 @@
 ﻿using Windows.Foundation;
 
-namespace Impart.WinUI.Common;
+namespace Impart.WinUI.Extensions;
 
 public static class ControlExtensions
 {

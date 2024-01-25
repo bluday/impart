@@ -1,10 +1,12 @@
-﻿global using Impart.WinUI.Common.Extensions;
-global using Impart.WinUI.Controls;
+﻿global using Impart.WinUI.Extensions;
+global using Impart.WinUI.UI;
+global using Impart.WinUI.UI.Views;
 global using Microsoft.UI;
 global using Microsoft.UI.Input;
 global using Microsoft.UI.Windowing;
 global using Microsoft.UI.Xaml;
 global using Microsoft.UI.Xaml.Controls;
 global using Microsoft.UI.Xaml.Media;
+global using Microsoft.UI.Xaml.Media.Animation;
 global using System;
 global using System.Collections.Generic;

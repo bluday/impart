@@ -1,6 +1,6 @@
 ﻿using Windows.Graphics;
 
-namespace Impart.WinUI.Common;
+namespace Impart.WinUI.Extensions;
 
 public static class RectExtensions
 {

@@ -1,8 +1,6 @@
-﻿using Microsoft.UI.Input;
-using Microsoft.UI.Windowing;
-using Windows.Graphics;
+﻿using Windows.Graphics;
 
-namespace Impart.WinUI.Common.Extensions;
+namespace Impart.WinUI.Extensions;
 
 public static class WindowExtensions
 {
@@ -13,7 +11,7 @@ public static class WindowExtensions
         titleBar.BackgroundColor
             = titleBar.ButtonBackgroundColor
             = titleBar.ButtonInactiveBackgroundColor
-            = Microsoft.UI.Colors.Transparent;
+            = Colors.Transparent;
     }
 
     public static void MoveToCenter(this AppWindow source, DisplayArea? displayArea = null)

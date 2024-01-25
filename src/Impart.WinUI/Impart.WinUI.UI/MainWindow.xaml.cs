@@ -1,4 +1,4 @@
-namespace Impart.WinUI.Controls;
+namespace Impart.WinUI.UI;
 
 /// <summary>
 /// An empty window that can be used on its own or navigated to within a Frame.
@@ -18,6 +18,8 @@ public sealed partial class MainWindow : Window
 
         ConfigureAppWindow();
         ConfigureTitleBar();
+
+        ContentFrame.Navigate<IntroductionPage>();
     }
 
     private void ConfigureAppWindow()
