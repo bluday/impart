@@ -5,7 +5,7 @@
 /// </summary>
 public sealed partial class App : Application
 {
-    private Window? _window;
+    private MainWindow? _window;
 
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
@@ -19,7 +19,9 @@ public sealed partial class App : Application
     /// <param name="args">Details about the launch request and process.</param>
     protected override void OnLaunched(LaunchActivatedEventArgs args)
     {
-        _window = new MainWindow();
+        // What should we do with the args? :)
+
+        _window = new();
 
         _window.Activate();
     }
