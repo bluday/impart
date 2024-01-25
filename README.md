@@ -1,8 +1,8 @@
 # Impart 🫐
 
-Project status: Suspended.
+Project status: Active
 
-### Screenshots:
+### Screenshots (of the old app):
 
-<img src="/assets/0.png" width="600"/>
-<img src="/assets/1.png" width="600"/>
+<img src="/assets/screenshots/0.png" width="600"/>
+<img src="/assets/screenshots/1.png" width="600"/>
