@@ -1,4 +1,6 @@
-# Impart 🫐
+# Impart
+
+Multi-purpose WinUI 3 chat app.
 
 Project status: Active
 
