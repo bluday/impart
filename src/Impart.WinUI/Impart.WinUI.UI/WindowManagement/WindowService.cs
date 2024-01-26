@@ -2,31 +2,28 @@
 
 public sealed class WindowService : IWindowService, IDisposable
 {
-    private readonly DispatcherQueue _mainDispatcherQueue;
+    private readonly HashSet<Shell> _windows;
 
-    private readonly HashSet<Shell> _windows = new();
-
-    public Shell MainWindow { get; } = new();
+    public Shell MainWindow { get; }
 
     public int WindowCount => _windows.Count + 1;
 
     public IReadOnlyList<Shell> Windows => _windows.ToList();
 
-    public WindowService(DispatcherQueue mainDispatcherQueue)
+    public WindowService()
     {
-        _mainDispatcherQueue = mainDispatcherQueue;
+        _windows = new();
+
+        MainWindow = new();
     }
 
     public Shell? CreateWindow()
     {
         Shell window = new();
 
-        if (!_windows.Add(window))
-        {
-            return null;
-        }
+        bool added = _windows.Add(window);
 
-        return window;
+        return added ? window : null;
     }
 
     public bool HasWindow(Window window)
@@ -41,7 +38,7 @@ public sealed class WindowService : IWindowService, IDisposable
 
     public void ActivateWindow(Window window)
     {
-        _mainDispatcherQueue.TryEnqueue(window.Activate);
+        window.DispatcherQueue.TryEnqueue(window.Activate);
     }
 
     public void Dispose() { }

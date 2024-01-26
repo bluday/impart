@@ -5,7 +5,7 @@
 /// </summary>
 public sealed partial class App : Application
 {
-    private static readonly IServiceProvider _serviceProvider = CreateServices();
+    public IServiceProvider ServiceProvider { get; } = CreateServices();
 
     public string? LaunchArgs { get; private set; }
 
@@ -18,7 +18,6 @@ public sealed partial class App : Application
     private static IServiceProvider CreateServices()
     {
         return new ServiceCollection()
-            .AddSingleton(DispatcherQueue.GetForCurrentThread())
             .AddSingleton<IWindowService, WindowService>()
             .AddTransient<ConversationsViewModel>()
             .AddTransient<IntroductionViewModel>()
@@ -35,7 +34,8 @@ public sealed partial class App : Application
     {
         LaunchArgs = args.Arguments;
 
-        _serviceProvider
+        // Use WeakReferenceMessager to send a message to IWindowService or activate directly?
+        ServiceProvider
             .GetRequiredService<IWindowService>()
             .ActivateMainWindow();
     }
