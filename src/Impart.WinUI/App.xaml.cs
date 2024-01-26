@@ -13,7 +13,19 @@ public sealed partial class App : Application
     /// Initializes the singleton application object.  This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
     /// </summary>
-    public App() => InitializeComponent();
+    public App()
+    {
+        InitializeServices();
+        InitializeComponent();
+    }
+
+    private void InitializeServices()
+    {
+        // Use WeakReferenceMessager to send a message to IWindowService or activate directly?
+        ServiceProvider
+            .GetRequiredService<IWindowService>()
+            .CreateWindow();
+    }
 
     private static IServiceProvider CreateServices()
     {
@@ -33,10 +45,5 @@ public sealed partial class App : Application
     protected override void OnLaunched(LaunchActivatedEventArgs args)
     {
         LaunchArgs = args.Arguments;
-
-        // Use WeakReferenceMessager to send a message to IWindowService or activate directly?
-        ServiceProvider
-            .GetRequiredService<IWindowService>()
-            .ActivateMainWindow();
     }
 }
