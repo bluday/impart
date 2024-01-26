@@ -2,7 +2,7 @@
 
 public interface IWindowService
 {
-    Shell MainWindow { get; }
+    Shell? MainWindow { get; }
 
     int WindowCount { get; }
 
@@ -11,8 +11,4 @@ public interface IWindowService
     Shell? CreateWindow();
 
     bool HasWindow(Window window);
-
-    void ActivateMainWindow();
-
-    void ActivateWindow(Window window);
 }
