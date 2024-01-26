@@ -30,6 +30,7 @@ public sealed partial class App : Application
     private static IServiceProvider CreateServices()
     {
         return new ServiceCollection()
+            .AddSingleton<IDialogService, DialogService>()
             .AddSingleton<IWindowService, WindowService>()
             .AddTransient<ConversationsViewModel>()
             .AddTransient<IntroductionViewModel>()
