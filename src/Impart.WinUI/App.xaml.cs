@@ -21,7 +21,7 @@ public sealed partial class App : Application
 
     private void InitializeServices()
     {
-        // Use WeakReferenceMessager to send a message to IWindowService or activate directly?
+        // Use WeakReferenceMessager to send a window activation message to IWindowService or activate directly?
         ServiceProvider
             .GetRequiredService<IWindowService>()
             .CreateWindow();
