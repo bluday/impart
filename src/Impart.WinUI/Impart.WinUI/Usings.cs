@@ -1,10 +1,12 @@
 ﻿global using Impart.Attributes;
 global using Impart.WinUI.Extensions;
 global using Impart.WinUI.UI;
+global using Impart.WinUI.UI.Controls;
 global using Impart.WinUI.UI.Views;
 global using Impart.WinUI.UI.WindowManagement;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.UI;
+global using Microsoft.UI.Dispatching;
 global using Microsoft.UI.Input;
 global using Microsoft.UI.Windowing;
 global using Microsoft.UI.Xaml;

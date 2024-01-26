@@ -5,14 +5,23 @@ namespace Impart.WinUI.UI.Controls;
 /// </summary>
 public sealed partial class Shell : Window
 {
+    public InputNonClientPointerSource NonClientPointerSource { get; }
+
     public DisplayArea DisplayArea { get; }
 
-    public InputNonClientPointerSource NonClientPointerSource { get; }
+    public WindowActivationState? ActivationState { get; private set; }
+
+    public bool IsActivated
+    {
+        get => ActivationState is not WindowActivationState.Deactivated;
+    }
+
+    public bool IsClosed { get; private set; }
 
     public Shell()
     {
-        DisplayArea            = AppWindow.GetDisplayArea();
         NonClientPointerSource = AppWindow.GetNonClientPointerSource();
+        DisplayArea            = AppWindow.GetDisplayArea();
         
         ExtendsContentIntoTitleBar = true;
 
@@ -21,5 +30,19 @@ public sealed partial class Shell : Window
         AppWindow.MakeTitleBarTransparent();
 
         InitializeComponent();
+    }
+
+    private void Window_Activated(object sender, WindowActivatedEventArgs args)
+    {
+        ActivationState = args.WindowActivationState;
+
+        Activated -= Window_Activated;
+    }
+
+    private void Window_Closed(object sender, WindowEventArgs args)
+    {
+        IsClosed = true;
+
+        Closed -= Window_Closed;
     }
 }

@@ -5,9 +5,7 @@
 /// </summary>
 public sealed partial class App : Application
 {
-    private readonly IWindowService _windowService;
-
-    private readonly IServiceProvider _serviceProvider;
+    private static readonly IServiceProvider _serviceProvider = CreateServices();
 
     public string? LaunchArgs { get; private set; }
 
@@ -15,23 +13,17 @@ public sealed partial class App : Application
     /// Initializes the singleton application object.  This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
     /// </summary>
-    public App()
-    {
-        _serviceProvider = CreateServices();
-
-        _windowService = _serviceProvider.GetRequiredService<IWindowService>();
-
-        InitializeComponent();
-    }
+    public App() => InitializeComponent();
 
     private static IServiceProvider CreateServices()
     {
         return new ServiceCollection()
+            .AddSingleton(DispatcherQueue.GetForCurrentThread())
             .AddSingleton<IWindowService, WindowService>()
-            .AddTransient<IViewModel, ConversationsViewModel>()
-            .AddTransient<IViewModel, IntroductionViewModel>()
-            .AddTransient<IViewModel, MainViewModel>()
-            .AddTransient<IViewModel, SettingsViewModel>()
+            .AddTransient<ConversationsViewModel>()
+            .AddTransient<IntroductionViewModel>()
+            .AddTransient<MainViewModel>()
+            .AddTransient<SettingsViewModel>()
             .BuildServiceProvider();
     }
 
@@ -43,6 +35,8 @@ public sealed partial class App : Application
     {
         LaunchArgs = args.Arguments;
 
-        // Create and activate the main window here.
+        _serviceProvider
+            .GetRequiredService<IWindowService>()
+            .ActivateMainWindow();
     }
 }
