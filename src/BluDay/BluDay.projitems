@@ -26,6 +26,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\TypeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\IImplementationProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\ObjectFactoryInfo`.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Usings.cs" />
   </ItemGroup>
 </Project>

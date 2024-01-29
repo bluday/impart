@@ -1,4 +1,6 @@
-﻿global using BluDay.Extensions.DependencyInjection;
+﻿global using BluDay.Domain.Models;
+global using BluDay.Domain.ViewModels;
+global using BluDay.Extensions.DependencyInjection;
 global using CommunityToolkit.Mvvm.ComponentModel;
 global using Impart.Core.Domain.Models;
 global using Impart.Core.Domain.ViewModels;
