@@ -2,13 +2,19 @@ namespace Impart;
 
 public sealed class ImpartApp : IImpartApp
 {
+    private string? _args;
+
     private readonly ImpartAppContainer _container;
 
     public bool IsDisposed { get; private set; }
 
     public bool IsInitialized { get; private set; }
 
-    public string? Arguments { get; private set; }
+    public string? Arguments
+    {
+        get         => _args;
+        private set => _args = value!.IsNullOrWhiteSpace() ? null : value;
+    }
 
     public ImpartApp()
     {
@@ -24,7 +30,7 @@ public sealed class ImpartApp : IImpartApp
     {
         if (IsInitialized) return;
 
-        Arguments = args!.IsNullOrWhiteSpace() ? null : args;
+        Arguments = args;
 
         _container.InitializeCoreServices();
 

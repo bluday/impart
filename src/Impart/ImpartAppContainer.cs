@@ -4,20 +4,24 @@ internal sealed class ImpartAppContainer : IDisposable
 {
     private readonly IImpartApp _app;
 
-    public IServiceCollection ServiceDescriptors { get; }
+    private readonly IServiceCollection _services;
 
     public IServiceProvider ServiceProvider { get; }
+
+    public IReadOnlyList<ServiceDescriptor> ServiceDescriptors { get; }
 
     public ImpartAppContainer(IImpartApp app)
     {
         _app = app;
 
-        ServiceDescriptors = CreateServiceDescriptors();
+        _services = CreateServices();
 
-        ServiceProvider = ServiceDescriptors.BuildServiceProvider();
+        ServiceDescriptors = _services.AsReadOnly();
+
+        ServiceProvider = _services.BuildServiceProvider();
     }
 
-    private static IServiceCollection CreateServiceDescriptors()
+    private static IServiceCollection CreateServices()
     {
         return new ServiceCollection()
             .AddSingleton<IDialogService, DialogService>()
@@ -27,7 +31,7 @@ internal sealed class ImpartAppContainer : IDisposable
 
     public void InitializeCoreServices()
     {
-        ServiceProvider!
+        ServiceProvider
             .GetRequiredService<IWindowService>()
             .CreateWindow();
     }
