@@ -31,6 +31,7 @@ internal sealed class ImpartAppContainer : IDisposable
 
     public void InitializeCoreServices()
     {
+        // Test.
         ServiceProvider
             .GetRequiredService<IWindowService>()
             .CreateWindow();

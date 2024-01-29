@@ -10,5 +10,5 @@ public interface IImpartApp : IDisposable
 
     void Initialize();
     
-    void Initialize(string? args);
+    void Initialize(string args);
 }

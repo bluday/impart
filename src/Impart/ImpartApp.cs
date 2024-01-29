@@ -2,39 +2,37 @@ namespace Impart;
 
 public sealed class ImpartApp : IImpartApp
 {
-    private string? _args;
+    private ImpartAppContainer? _container;
 
-    private readonly ImpartAppContainer _container;
+    private string? _args;
 
     public bool IsDisposed { get; private set; }
 
     public bool IsInitialized { get; private set; }
 
-    public string? Arguments
-    {
-        get         => _args;
-        private set => _args = value!.IsNullOrWhiteSpace() ? null : value;
-    }
+    public string? Arguments => _args;
 
-    public ImpartApp()
+    private void CreateContainer()
     {
         _container = new(app: this);
+
+        _container.InitializeCoreServices();
     }
 
     public void Initialize()
     {
-        Initialize(args: null);
-    }
-
-    public void Initialize(string? args)
-    {
         if (IsInitialized) return;
 
-        Arguments = args;
-
-        _container.InitializeCoreServices();
+        CreateContainer();
 
         IsInitialized = true;
+    }
+
+    public void Initialize(string args)
+    {
+        _args = args.NotWhiteSpaceOrDefault(null);
+
+        Initialize();
     }
 
     public void Dispose()

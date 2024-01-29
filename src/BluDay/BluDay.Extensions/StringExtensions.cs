@@ -11,4 +11,9 @@ public static class StringExtensions
     {
         return string.IsNullOrEmpty(source);
     }
+
+    public static string? NotWhiteSpaceOrDefault(this string source, string? defaultValue = null)
+    {
+        return string.IsNullOrWhiteSpace(source) ? defaultValue : source;
+    }
 }
