@@ -30,7 +30,7 @@ public sealed class ImpartApp : IImpartApp
 
     public void Initialize(string args)
     {
-        _args = args.NotWhiteSpaceOrDefault(null);
+        _args = args.NotWhiteSpaceOrDefault();
 
         Initialize();
     }
