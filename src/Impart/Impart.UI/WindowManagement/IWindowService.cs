@@ -1,6 +1,6 @@
-﻿namespace Impart.WinUI.UI.WindowManagement;
+﻿namespace Impart.UI.WindowManagement;
 
-public interface IWindowService
+public interface IWindowService : IDisposable
 {
     Shell? MainWindow { get; }
 

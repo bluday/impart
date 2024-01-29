@@ -7,7 +7,7 @@ public static class ControlExtensions
     public static Rect GetVisualTransformBoundsRect(this FrameworkElement source)
     {
         return source
-            .TransformToVisual(visual: null)
+            .TransformToVisual(null)
             .TransformBounds(new Rect(
                 x: 0,
                 y: 0,

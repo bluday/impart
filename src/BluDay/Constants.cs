@@ -1,4 +1,4 @@
-﻿namespace Impart;
+﻿namespace BluDay;
 
 public static class Constants
 {

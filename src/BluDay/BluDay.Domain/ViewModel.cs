@@ -1,3 +1,3 @@
-﻿namespace Impart.Core.Domain.ViewModels;
+﻿namespace BluDay.Domain.ViewModels;
 
 public abstract class ViewModel : ObservableObject, IViewModel { }

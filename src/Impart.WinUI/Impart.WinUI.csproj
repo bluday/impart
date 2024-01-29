@@ -29,22 +29,20 @@
     <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.22621.2428" />
     <Manifest Include="$(ApplicationManifest)" />
   </ItemGroup>
+  
+  <ImportGroup>
+    <Import Project="..\BluDay\BluDay.projitems" Label="Shared" />
+    <Import Project="..\Impart\Impart.projitems" Label="Shared" />
+  </ImportGroup>
 
   <ItemGroup>
     <Content Include="..\..\assets\icons\**" Label="Assets">
       <Link>Assets\Icons\%(FileName)%(Extension)</Link>
     </Content>
+    
+    <Folder Include="Assets\" />
   </ItemGroup>
 
-  <!-- 
-    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
-    Tools extension to be activated for this project even if the Windows App SDK Nuget
-    package has not yet been restored.
-  -->
-  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
-    <ProjectCapability Include="Msix" />
-  </ItemGroup>
-  
   <ItemGroup>
     <None Remove="Impart.WinUI.UI\Views\ConversationsPage.xaml" />
     <None Remove="Impart.WinUI.UI\Views\IntroductionPage.xaml" />
@@ -72,8 +70,13 @@
     </Page>
   </ItemGroup>
   
-  <ItemGroup>
-    <Folder Include="Assets\" />
+  <!-- 
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
   </ItemGroup>
   
   <!-- 
@@ -84,6 +87,4 @@
   <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
   </PropertyGroup>
-  
-  <Import Project="..\Impart\Impart.projitems" Label="Shared" />
 </Project>

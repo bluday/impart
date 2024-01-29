@@ -1,4 +1,4 @@
-﻿namespace Impart.Core.Domain.Models;
+﻿namespace BluDay.Domain.Models;
 
 public abstract class Model : IModel, IEquatable<Model>, IEqualityComparer<Model>
 {

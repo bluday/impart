@@ -5,39 +5,13 @@
 /// </summary>
 public sealed partial class App : Application
 {
-    public IServiceProvider ServiceProvider { get; } = CreateServices();
-
-    public string? LaunchArgs { get; private set; }
+    private readonly IImpartApp _app = new ImpartApp();
 
     /// <summary>
     /// Initializes the singleton application object.  This is the first line of authored code
     /// executed, and as such is the logical equivalent of main() or WinMain().
     /// </summary>
-    public App()
-    {
-        InitializeServices();
-        InitializeComponent();
-    }
-
-    private void InitializeServices()
-    {
-        // Use WeakReferenceMessager to send a window activation message to IWindowService or activate directly?
-        ServiceProvider
-            .GetRequiredService<IWindowService>()
-            .CreateWindow();
-    }
-
-    private static IServiceProvider CreateServices()
-    {
-        return new ServiceCollection()
-            .AddSingleton<IDialogService, DialogService>()
-            .AddSingleton<IWindowService, WindowService>()
-            .AddTransient<ConversationsViewModel>()
-            .AddTransient<IntroductionViewModel>()
-            .AddTransient<MainViewModel>()
-            .AddTransient<SettingsViewModel>()
-            .BuildServiceProvider();
-    }
+    public App() => InitializeComponent();
 
     /// <summary>
     /// Invoked when the application is launched.
@@ -45,6 +19,6 @@ public sealed partial class App : Application
     /// <param name="args">Details about the launch request and process.</param>
     protected override void OnLaunched(LaunchActivatedEventArgs args)
     {
-        LaunchArgs = args.Arguments;
+        _app.Initialize(args.Arguments);
     }
 }

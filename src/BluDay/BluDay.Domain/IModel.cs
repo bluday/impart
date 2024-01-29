@@ -1,4 +1,4 @@
-﻿namespace Impart.Core.Domain.Models;
+﻿namespace BluDay.Domain.Models;
 
 public interface IModel
 {

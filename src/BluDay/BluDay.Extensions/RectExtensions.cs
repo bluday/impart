@@ -1,6 +1,6 @@
 ﻿using Windows.Graphics;
 
-namespace Impart.WinUI.Extensions;
+namespace BluDay.Extensions;
 
 public static class RectExtensions
 {

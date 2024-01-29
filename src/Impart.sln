@@ -7,6 +7,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Impart", "Impart\Impart.shp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impart.WinUI", "Impart.WinUI\Impart.WinUI.csproj", "{0C968C02-4347-46D8-9DA7-F832B3F60652}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BluDay", "BluDay\BluDay.shproj", "{0E1A4031-0EA7-425C-9871-F61C58666CD3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM64 = Debug|ARM64
@@ -43,7 +45,10 @@ Global
 		SolutionGuid = {C75B2FC9-A9F7-493C-9A65-0FD6A84DBA92}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		BluDay\BluDay.projitems*{0c968c02-4347-46d8-9da7-f832b3f60652}*SharedItemsImports = 5
 		Impart\Impart.projitems*{0c968c02-4347-46d8-9da7-f832b3f60652}*SharedItemsImports = 5
+		BluDay\BluDay.projitems*{0e1a4031-0ea7-425c-9871-f61c58666cd3}*SharedItemsImports = 13
+		BluDay\BluDay.projitems*{be650113-8010-4a08-bb99-b3ea6fd1c12c}*SharedItemsImports = 13
 		Impart\Impart.projitems*{be650113-8010-4a08-bb99-b3ea6fd1c12c}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

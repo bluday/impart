@@ -1,6 +1,6 @@
-﻿namespace Impart.WinUI.UI.WindowManagement;
+﻿namespace Impart.UI.WindowManagement;
 
-public sealed class WindowService : IWindowService, IDisposable
+public sealed class WindowService : IWindowService
 {
     private readonly HashSet<Shell> _windows = new();
 
