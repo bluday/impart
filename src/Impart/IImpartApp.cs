@@ -8,10 +8,6 @@ public interface IImpartApp : IDisposable
 
     string? Args { get; }
 
-    IServiceProvider ServiceProvider { get; }
-
-    IReadOnlyList<ServiceDescriptor> ServiceDescriptors { get; }
-
     void Initialize();
 
     void Initialize(string? args);

@@ -2,39 +2,17 @@ namespace Impart;
 
 public sealed class ImpartApp : IImpartApp
 {
+    private readonly ImpartAppContainer _container;
+
     public bool IsDisposed { get; private set; }
 
     public bool IsInitialized { get; private set; }
 
     public string? Args { get; private set; }
 
-    public IServiceProvider ServiceProvider { get; }
-
-    public IReadOnlyList<ServiceDescriptor> ServiceDescriptors { get; }
-
     public ImpartApp()
     {
-        IServiceCollection services = CreateServiceDescriptors();
-
-        ServiceProvider = services.BuildServiceProvider();
-
-        ServiceDescriptors = services.AsReadOnly();
-    }
-
-    private void InitializeServices()
-    {
-        // Temporary solution.
-        ServiceProvider
-            .GetRequiredService<IWindowService>()
-            .CreateWindow();
-    }
-
-    private static IServiceCollection CreateServiceDescriptors()
-    {
-        return new ServiceCollection()
-            .AddSingleton<IDialogService, DialogService>()
-            .AddSingleton<IWindowService, WindowService>()
-            .AddSingleton<IViewModelProvider, ViewModelProvider>();
+        _container = new(app: this);
     }
 
     public void Initialize()
@@ -46,11 +24,9 @@ public sealed class ImpartApp : IImpartApp
     {
         if (IsInitialized) return;
 
-        Args = args;
+        Args = args!.IsNullOrWhiteSpace() ? null : args;
 
-        InitializeServices();
-
-        // Do other stuff, maybe?
+        _container.InitializeCoreServices();
 
         IsInitialized = true;
     }

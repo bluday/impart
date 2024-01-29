@@ -1,6 +1,8 @@
-﻿namespace BluDay.Attributes;
+﻿using BluDay.Domain.ViewModels;
+
+namespace BluDay.Attributes;
 
 public sealed class UseViewModelAttribute<TViewModel> : Attribute where TViewModel : IViewModel
 {
-    public UseViewModelAttribute() { }
+    // ( 0 _ o )
 }

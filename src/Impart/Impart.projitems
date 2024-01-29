@@ -21,6 +21,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\ViewManagement\ViewModelProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\WindowManagement\IWindowService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\WindowManagement\WindowService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImpartAppContainer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImpartApp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Usings.cs" />
   </ItemGroup>
