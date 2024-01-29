@@ -6,9 +6,9 @@ public interface IImpartApp : IDisposable
 
     bool IsInitialized { get; }
 
-    string? Args { get; }
+    string? Arguments { get; }
 
     void Initialize();
-
+    
     void Initialize(string? args);
 }

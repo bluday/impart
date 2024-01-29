@@ -8,7 +8,7 @@ public sealed class ImpartApp : IImpartApp
 
     public bool IsInitialized { get; private set; }
 
-    public string? Args { get; private set; }
+    public string? Arguments { get; private set; }
 
     public ImpartApp()
     {
@@ -24,7 +24,7 @@ public sealed class ImpartApp : IImpartApp
     {
         if (IsInitialized) return;
 
-        Args = args!.IsNullOrWhiteSpace() ? null : args;
+        Arguments = args!.IsNullOrWhiteSpace() ? null : args;
 
         _container.InitializeCoreServices();
 
@@ -33,6 +33,6 @@ public sealed class ImpartApp : IImpartApp
 
     public void Dispose()
     {
-        throw new NotImplementedException();
+        _container?.Dispose();
     }
 }
