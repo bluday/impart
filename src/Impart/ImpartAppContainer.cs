@@ -6,7 +6,7 @@ internal sealed class ImpartAppContainer : IDisposable
 
     public static IServiceCollection ServiceDescriptors { get; } = new ServiceCollection();
 
-    public IServiceProvider ServiceProvider { get; private set; }
+    public IServiceProvider ServiceProvider { get; }
 
     static ImpartAppContainer()
     {
