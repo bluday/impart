@@ -22,6 +22,7 @@ public sealed class WindowService : IWindowService
 
     public IWindow? CreateWindow()
     {
+        // Temporary; don't freak out.
         var window = (IWindow)new object();
 
         bool added = _windows.Add(window);

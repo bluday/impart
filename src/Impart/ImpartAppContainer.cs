@@ -35,8 +35,6 @@ internal sealed class ImpartAppContainer : IDisposable
 
     public void InitializeCoreServices()
     {
-        // TODO: Find a good way to "pre-initialize" services on launch.
-
         _serviceProvider
             .GetRequiredService<IWindowService>()
             .CreateWindow();
