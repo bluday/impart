@@ -6,7 +6,7 @@ public interface INavigator
 
     bool CanGoForward { get; }
 
-    int MaxViewCacheSize { get; set; }
+    int MaxCacheSize { get; set; }
 
     Guid Id { get; }
 
