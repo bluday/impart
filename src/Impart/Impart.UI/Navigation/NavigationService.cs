@@ -8,6 +8,6 @@ public sealed class NavigationService : INavigationService
 
     public INavigator CreateNavigator(object source)
     {
-        return null!;
+        throw new NotImplementedException();
     }
 }
