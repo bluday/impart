@@ -22,6 +22,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)impart.ui\navigation\NavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\ViewManagement\IViewModelProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\ViewManagement\ViewModelProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)impart.ui\windowmanagement\IWindow.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\WindowManagement\IWindowService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\WindowManagement\WindowService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImpartAppContainer.cs" />

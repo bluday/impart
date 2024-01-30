@@ -2,24 +2,34 @@
 
 public sealed class WindowService : IWindowService
 {
-    private readonly HashSet<Shell> _windows = new();
+    private readonly INavigationService _navigationService;
 
-    public Shell? MainWindow => _windows.FirstOrDefault();
+    private readonly HashSet<IWindow> _windows = new();
+
+    public IWindow? MainWindow => _windows.FirstOrDefault();
 
     public int WindowCount => _windows.Count;
 
-    public IReadOnlyList<Shell> Windows => _windows.ToList();
-
-    public Shell? CreateWindow()
+    public IReadOnlyList<IWindow> Windows
     {
-        Shell window = new();
+        get => _windows.ToList().AsReadOnly();
+    }
+
+    public WindowService(INavigationService navigationService)
+    {
+        _navigationService = navigationService;
+    }
+
+    public IWindow? CreateWindow()
+    {
+        var window = (IWindow)new object();
 
         bool added = _windows.Add(window);
 
         return added ? window : null;
     }
 
-    public bool HasWindow(Window window)
+    public bool HasWindow(IWindow window)
     {
         return _windows.Contains(window);
     }

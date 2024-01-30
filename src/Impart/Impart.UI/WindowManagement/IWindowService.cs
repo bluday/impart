@@ -2,13 +2,13 @@
 
 public interface IWindowService : IDisposable
 {
-    Shell? MainWindow { get; }
+    IWindow? MainWindow { get; }
 
     int WindowCount { get; }
 
-    IReadOnlyList<Shell> Windows { get; }
+    IReadOnlyList<IWindow> Windows { get; }
 
-    Shell? CreateWindow();
+    IWindow? CreateWindow();
 
-    bool HasWindow(Window window);
+    bool HasWindow(IWindow window);
 }
