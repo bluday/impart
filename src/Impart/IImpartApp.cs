@@ -9,6 +9,4 @@ public interface IImpartApp : IDisposable
     string? Arguments { get; }
 
     void Initialize();
-    
-    void Initialize(string args);
 }

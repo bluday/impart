@@ -12,8 +12,10 @@ public sealed class ImpartApp : IImpartApp
 
     public string? Arguments => _args;
 
-    public ImpartApp()
+    public ImpartApp(string args)
     {
+        _args = args.NotWhiteSpaceOrDefault();
+
         _container = new(app: this);
     }
 
@@ -24,13 +26,6 @@ public sealed class ImpartApp : IImpartApp
         _container.InitializeCoreServices();
 
         IsInitialized = true;
-    }
-
-    public void Initialize(string args)
-    {
-        _args = args.NotWhiteSpaceOrDefault();
-
-        Initialize();
     }
 
     public void Dispose()
