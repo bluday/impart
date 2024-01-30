@@ -2,9 +2,9 @@ namespace Impart;
 
 public sealed class ImpartApp : IImpartApp
 {
-    private ImpartAppContainer? _container;
-
     private string? _args;
+
+    private ImpartAppContainer? _container;
 
     public bool IsDisposed { get; private set; }
 
@@ -14,7 +14,7 @@ public sealed class ImpartApp : IImpartApp
 
     private void CreateContainer()
     {
-        _container = new(app: this);
+        _container = new(this);
 
         _container.InitializeCoreServices();
     }
