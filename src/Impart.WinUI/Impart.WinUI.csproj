@@ -36,18 +36,19 @@
   </ImportGroup>
 
   <ItemGroup>
-    <Content Include="..\..\assets\icons\**" Label="Assets">
-      <Link>Assets\Icons\%(FileName)%(Extension)</Link>
-    </Content>
-    
-    <Folder Include="Assets\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Impart.WinUI.UI\Views\ConversationsPage.xaml" />
     <None Remove="Impart.WinUI.UI\Views\IntroductionPage.xaml" />
     <None Remove="Impart.WinUI.UI\Views\MainPage.xaml" />
     <None Remove="Impart.WinUI.UI\Views\SettingsPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\assets\icons\**" Label="Assets">
+      <Link>Assets\Icons\%(FileName)%(Extension)</Link>
+    </Content>
+    <Content Remove="Assets\StoreLogo.scale-100.png" />
+    <Content Remove="Assets\StoreLogo.scale-200.png" />
+    <Content Remove="Assets\StoreLogo.scale-400.png" />
   </ItemGroup>
   
   <ItemGroup>

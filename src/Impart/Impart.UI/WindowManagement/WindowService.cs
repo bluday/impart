@@ -22,12 +22,15 @@ public sealed class WindowService : IWindowService
 
     public IWindow? CreateWindow()
     {
-        // Temporary; don't freak out.
-        var window = (IWindow)new object();
+        /*
+        IWindow window = new...
 
         bool added = _windows.Add(window);
 
         return added ? window : null;
+        */
+
+        return null;
     }
 
     public bool HasWindow(IWindow window)
