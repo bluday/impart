@@ -2,26 +2,29 @@ namespace Impart;
 
 internal sealed class ImpartAppContainer : IDisposable
 {
-    private readonly IImpartApp _app;
+    private readonly ImpartApp _app;
 
-    private readonly IServiceCollection _services;
+    private readonly ServiceProvider _serviceProvider;
 
-    public IServiceProvider ServiceProvider { get; }
+    private readonly IServiceCollection _serviceDescriptors;
 
-    public IReadOnlyList<ServiceDescriptor> ServiceDescriptors { get; }
+    public IServiceProvider ServiceProvider => _serviceProvider;
 
-    public ImpartAppContainer(IImpartApp app)
+    public IReadOnlyList<ServiceDescriptor> ServiceDescriptors
+    {
+        get => _serviceDescriptors.AsReadOnly();
+    }
+
+    public ImpartAppContainer(ImpartApp app)
     {
         _app = app;
 
-        _services = CreateServices();
+        _serviceDescriptors = CreateServiceDescriptors();
 
-        ServiceDescriptors = _services.AsReadOnly();
-
-        ServiceProvider = _services.BuildServiceProvider();
+        _serviceProvider = _serviceDescriptors.BuildServiceProvider();
     }
 
-    private static IServiceCollection CreateServices()
+    private static IServiceCollection CreateServiceDescriptors()
     {
         return new ServiceCollection()
             .AddSingleton<IDialogService, DialogService>()
@@ -31,8 +34,9 @@ internal sealed class ImpartAppContainer : IDisposable
 
     public void InitializeCoreServices()
     {
-        // Test.
-        ServiceProvider
+        // TODO: Find a good way to "pre-initialize" services on launch.
+
+        _serviceProvider
             .GetRequiredService<IWindowService>()
             .CreateWindow();
     }

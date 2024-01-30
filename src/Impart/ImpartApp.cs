@@ -4,7 +4,7 @@ public sealed class ImpartApp : IImpartApp
 {
     private string? _args;
 
-    private ImpartAppContainer? _container;
+    private ImpartAppContainer _container;
 
     public bool IsDisposed { get; private set; }
 
@@ -12,18 +12,16 @@ public sealed class ImpartApp : IImpartApp
 
     public string? Arguments => _args;
 
-    private void CreateContainer()
+    public ImpartApp()
     {
-        _container = new(this);
-
-        _container.InitializeCoreServices();
+        _container = new(app: this);
     }
 
     public void Initialize()
     {
         if (IsInitialized) return;
 
-        CreateContainer();
+        _container.InitializeCoreServices();
 
         IsInitialized = true;
     }
