@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\Interactions\DialogService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\Interactions\IDialogService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\Navigation\INavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)impart.ui\navigation\INavigator.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)impart.ui\navigation\NavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\ViewManagement\IViewModelProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Impart.UI\ViewManagement\ViewModelProvider.cs" />
