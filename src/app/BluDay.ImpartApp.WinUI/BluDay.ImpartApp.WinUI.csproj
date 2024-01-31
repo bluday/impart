@@ -31,7 +31,7 @@
   </ItemGroup>
   
   <ImportGroup>
-    <Import Project="..\BluDay\BluDay.projitems" Label="Shared" />
+    <Import Project="..\BluDay.Common\BluDay.Common.projitems" Label="Shared" />
     <Import Project="..\BluDay.ImpartApp\BluDay.ImpartApp.projitems" Label="Shared" />
   </ImportGroup>
 
