@@ -40,7 +40,7 @@
   </ImportGroup>
 
   <ItemGroup>
-    <Content Include="..\..\..\assets\icons\winui\**" Label="Assets">
+    <Content Include="..\..\assets\icons\winui\**" Label="Assets">
       <Link>Assets\%(FileName)%(Extension)</Link>
     </Content>
   </ItemGroup>
