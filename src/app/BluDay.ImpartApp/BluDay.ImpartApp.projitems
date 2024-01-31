@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>be650113-8010-4a08-bb99-b3ea6fd1c12c</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>BluDay.ImpartApp</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Domain\ViewModels\ConversationsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Domain\ViewModels\IntroductionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Domain\ViewModels\SettingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Domain\ViewModels\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Core\Domain\Models\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Interactions\DialogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Interactions\IDialogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Navigation\INavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Navigation\INavigator.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\Navigation\NavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewManagement\IViewModelProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\ViewManagement\ViewModelProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\WindowManagement\IWindow.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\WindowManagement\IWindowService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UI\WindowManagement\WindowService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IImpartApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImpartApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImpartAppContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Usings.cs" />
+  </ItemGroup>
+</Project>

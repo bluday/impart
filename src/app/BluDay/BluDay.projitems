@@ -9,22 +9,22 @@
     <Import_RootNamespace>BluDay</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Attributes\UseViewModelAttribute.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\IImplementationProvider`.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\ImplementationProvider`.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\ObjectFactorySiteFactory.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\IObjectFactorySite.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\ObjectFactorySite`.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\IObjectFactoryInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Attributes\UseViewModelAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\IImplementationProvider`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\ImplementationProvider`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\ObjectFactorySiteFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\IObjectFactorySite.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\ObjectFactorySite`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\IObjectFactoryInfo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Domain\IModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Domain\IViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Domain\Model.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Domain\ViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\RectExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\StringExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\TypeExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\IImplementationProvider.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)BluDay.Extensions\DependencyInjection\ObjectFactoryInfo`.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\IModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\IViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Model.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\RectExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\IImplementationProvider.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\ObjectFactoryInfo`.cs" />
   </ItemGroup>
 </Project>
