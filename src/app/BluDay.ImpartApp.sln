@@ -9,16 +9,23 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "BluDay.ImpartApp", "BluDay.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BluDay.ImpartApp.WinUI", "BluDay.ImpartApp.WinUI\BluDay.ImpartApp.WinUI.csproj", "{0C968C02-4347-46D8-9DA7-F832B3F60652}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluDay.ImpartApp.WPF", "BluDay.ImpartApp.WPF\BluDay.ImpartApp.WPF.csproj", "{771235F8-471C-41CC-B895-ED5C97503C88}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|ARM64 = Debug|ARM64
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|ARM64 = Release|ARM64
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|Any CPU.Build.0 = Debug|x64
+		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|Any CPU.Deploy.0 = Debug|x64
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|ARM64.ActiveCfg = Debug|ARM64
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|ARM64.Build.0 = Debug|ARM64
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|ARM64.Deploy.0 = Debug|ARM64
@@ -28,6 +35,9 @@ Global
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|x86.ActiveCfg = Debug|x86
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|x86.Build.0 = Debug|x86
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Debug|x86.Deploy.0 = Debug|x86
+		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|Any CPU.ActiveCfg = Release|x64
+		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|Any CPU.Build.0 = Release|x64
+		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|Any CPU.Deploy.0 = Release|x64
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|ARM64.ActiveCfg = Release|ARM64
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|ARM64.Build.0 = Release|ARM64
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|ARM64.Deploy.0 = Release|ARM64
@@ -37,6 +47,22 @@ Global
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|x86.ActiveCfg = Release|x86
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|x86.Build.0 = Release|x86
 		{0C968C02-4347-46D8-9DA7-F832B3F60652}.Release|x86.Deploy.0 = Release|x86
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Debug|ARM64.ActiveCfg = Debug|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Debug|ARM64.Build.0 = Debug|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Debug|x64.Build.0 = Debug|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Debug|x86.Build.0 = Debug|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Release|ARM64.ActiveCfg = Release|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Release|ARM64.Build.0 = Release|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Release|x64.ActiveCfg = Release|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Release|x64.Build.0 = Release|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Release|x86.ActiveCfg = Release|Any CPU
+		{771235F8-471C-41CC-B895-ED5C97503C88}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +74,8 @@ Global
 		BluDay.Common\BluDay.Common.projitems*{0c968c02-4347-46d8-9da7-f832b3f60652}*SharedItemsImports = 5
 		BluDay.ImpartApp\BluDay.ImpartApp.projitems*{0c968c02-4347-46d8-9da7-f832b3f60652}*SharedItemsImports = 5
 		BluDay.Common\BluDay.Common.projitems*{0e1a4031-0ea7-425c-9871-f61c58666cd3}*SharedItemsImports = 13
+		BluDay.Common\BluDay.Common.projitems*{771235f8-471c-41cc-b895-ed5c97503c88}*SharedItemsImports = 5
+		BluDay.ImpartApp\BluDay.ImpartApp.projitems*{771235f8-471c-41cc-b895-ed5c97503c88}*SharedItemsImports = 5
 		BluDay.ImpartApp\BluDay.ImpartApp.projitems*{be650113-8010-4a08-bb99-b3ea6fd1c12c}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

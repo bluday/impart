@@ -21,7 +21,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Domain\IViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Domain\Model.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Extensions\RectExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\IImplementationProvider.cs" />

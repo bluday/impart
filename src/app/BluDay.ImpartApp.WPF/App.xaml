@@ -1,0 +1,8 @@
+﻿<Application x:Class="BluDay.ImpartApp.WPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="UI\Controls\Shell.xaml">
+    <Application.Resources>
+        <!-- ( 0 _ o ) -->
+    </Application.Resources>
+</Application>

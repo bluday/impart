@@ -40,6 +40,13 @@
       <Link>Assets\Icons\%(FileName)%(Extension)</Link>
     </Content>
   </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="UI\Styles\ChatMessageBubbleStyle.xaml" />
+    <Content Include="UI\Styles\NavigationViewStyle.xaml" />
+    <Content Include="UI\Styles\PersonPictureStyle.xaml" />
+    <Content Include="UI\Styles\UserControlStyle.xaml" />
+  </ItemGroup>
   
   <ItemGroup>
     <Page Update="BluDay.ImpartApp.WinUI.UI\Views\MainPage.xaml">
