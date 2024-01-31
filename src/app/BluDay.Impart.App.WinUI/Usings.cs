@@ -1,4 +1,5 @@
-﻿global using BluDay.Common.Attributes;
+﻿global using BluDay.Common;
+global using BluDay.Common.Attributes;
 global using BluDay.Impart.App.WinUI.Extensions;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.UI;
@@ -10,6 +11,4 @@ global using Microsoft.UI.Xaml.Media;
 global using Microsoft.UI.Xaml.Media.Animation;
 global using System;
 global using System.Collections.Generic;
-global using System.Diagnostics;
-global using System.Diagnostics.CodeAnalysis;
 global using System.Linq;

@@ -6,7 +6,7 @@ public interface IImpartApp : IDisposable
 
     bool IsInitialized { get; }
 
-    string? Arguments { get; }
+    IReadOnlyList<string> Arguments { get; }
 
     void Initialize();
 }

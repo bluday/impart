@@ -2,6 +2,8 @@
 
 public static class Constants
 {
+    public const char Whitespace = ' ';
+
     public const string Contextual = "Contextual";
 
     public const string Default = "Default";

@@ -2,8 +2,7 @@ namespace BluDay.Impart.App;
 
 public sealed class ImpartApp : IImpartApp
 {
-    [NotEmptyOrWhiteSpace]
-    private string? _args;
+    private IReadOnlyList<string> _args;
 
     private ImpartAppContainer _container;
 
@@ -11,9 +10,9 @@ public sealed class ImpartApp : IImpartApp
 
     public bool IsInitialized { get; private set; }
 
-    public string? Arguments => _args;
+    public IReadOnlyList<string> Arguments => _args;
 
-    public ImpartApp(string args)
+    public ImpartApp(string[] args)
     {
         _args = args;
 
