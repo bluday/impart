@@ -1,6 +1,6 @@
 namespace BluDay.Common.Extensions.DependencyInjection;
 
-public abstract class ImplementationProvider<TService> : IImplementationProvider<TService> where TService : notnull
+public class ImplementationProvider<TService> : IImplementationProvider<TService> where TService : notnull
 {
     private readonly IReadOnlyDictionary<Type, IObjectFactorySite> _objectFactorySiteMap = CreateMappedObjectFactorySites();
 
