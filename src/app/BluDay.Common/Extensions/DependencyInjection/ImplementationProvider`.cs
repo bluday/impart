@@ -8,9 +8,9 @@ public class ImplementationProvider<TService> : IImplementationProvider<TService
 
     private static readonly IReadOnlyDictionary<Type, IObjectFactorySite> _objectFactorySiteMap;
 
-    public static Type ServiceType => _serviceType;
-
     Type IImplementationProvider.ServiceType => _serviceType;
+
+    public static Type ServiceType => _serviceType;
 
     static ImplementationProvider()
     {
