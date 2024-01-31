@@ -8,4 +8,9 @@ public static class ObjectFactorySiteFactory
 
         return (IObjectFactorySite)Activator.CreateInstance(genericType)!;
     }
+
+    public static IObjectFactorySite Create<TService>([DisallowNull] Type implementationType)
+    {
+        return Create(typeof(TService), implementationType);
+    }
 }

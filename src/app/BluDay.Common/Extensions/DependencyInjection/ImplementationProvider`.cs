@@ -15,13 +15,9 @@ public class ImplementationProvider<TService> : IImplementationProvider<TService
 
     private static IReadOnlyDictionary<Type, IObjectFactorySite> CreateMappedObjectFactorySites()
     {
-        Type serviceType = typeof(TService);
-
-        return serviceType
+        return typeof(TService)
             .GetImplementationTypes()
-            .Select(
-                implementationType => ObjectFactorySiteFactory.Create(serviceType, implementationType)
-            )
+            .Select(ObjectFactorySiteFactory.Create<TService>)
             .ToDictionary(
                 keySelector:     site => site.Info.ImplementationType,
                 elementSelector: site => site

@@ -27,9 +27,9 @@ internal sealed class ImpartAppContainer : IDisposable
     private static IServiceCollection CreateServiceDescriptors()
     {
         return new ServiceCollection()
-            .AddSingleton<IDialogService, DialogService>()
-            .AddSingleton<IWindowService, WindowService>()
+            .AddSingleton<IDialogService,     DialogService>()
             .AddSingleton<INavigationService, NavigationService>()
+            .AddSingleton<IWindowService,     WindowService>()
             .AddSingleton<IViewModelProvider, ViewModelProvider>();
     }
 
