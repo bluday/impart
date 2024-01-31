@@ -2,6 +2,7 @@ namespace BluDay.ImpartApp;
 
 public sealed class ImpartApp : IImpartApp
 {
+    [NotEmptyOrWhiteSpace]
     private string? _args;
 
     private ImpartAppContainer _container;
@@ -14,7 +15,7 @@ public sealed class ImpartApp : IImpartApp
 
     public ImpartApp(string args)
     {
-        _args = args.NotWhiteSpaceOrDefault();
+        _args = args;
 
         _container = new(app: this);
     }

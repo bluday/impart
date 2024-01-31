@@ -49,11 +49,17 @@
   </ItemGroup>
   
   <ItemGroup>
-    <Page Update="BluDay.ImpartApp.WinUI.UI\Views\MainPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Update="BluDay.ImpartApp.WinUI.UI\Views\ConversationsPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
     
-    <Page Update="BluDay.ImpartApp.WinUI.UI\Views\ConversationsPage.xaml">
+    <Page Update="BluDay.ImpartApp.WinUI.UI\Views\IntroductionPage.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    
+    <Page Update="BluDay.ImpartApp.WinUI.UI\Views\MainPage.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
@@ -61,10 +67,6 @@
     <Page Update="BluDay.ImpartApp.WinUI.UI\Views\SettingsPage.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
-    </Page>
-    
-    <Page Update="BluDay.ImpartApp.WinUI.UI\Views\IntroductionPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   
