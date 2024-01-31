@@ -4,13 +4,7 @@ public static class Constants
 {
     public const char Whitespace = ' ';
 
-    public const string Contextual = "Contextual";
-
     public const string Default = "Default";
-
-    public const string Model = "Model";
-
-    public const string Name = "Name";
 
     public const string None = "None";
 
