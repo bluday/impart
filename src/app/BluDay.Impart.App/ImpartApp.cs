@@ -2,9 +2,9 @@ namespace BluDay.Impart.App;
 
 public sealed class ImpartApp : IImpartApp
 {
-    private IReadOnlyList<string> _args;
+    private readonly IReadOnlyList<string> _args;
 
-    private ImpartAppContainer _container;
+    private readonly ImpartAppContainer _container;
 
     public bool IsDisposed { get; private set; }
 
@@ -14,7 +14,7 @@ public sealed class ImpartApp : IImpartApp
 
     public ImpartApp(string[] args)
     {
-        _args = args;
+        _args = args.AsReadOnly();
 
         _container = new(app: this);
     }
