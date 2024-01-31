@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window mc:Ignorable="d"
+        x:Class="BluDay.Impart.App.WinUI.UI.Controls.Shell"
+        x:DefaultBindMode="OneWay"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:controls="using:BluDay.Impart.App.WinUI.UI.Controls"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Activated="Window_Activated"
+        Closed="Window_Closed">
+    <Window.SystemBackdrop>
+        <MicaBackdrop Kind="Base"/>
+    </Window.SystemBackdrop>
+    
+    <Grid x:Name="RootGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <controls:TitleBar x:Name="TitleBar"
+                           Icon="{StaticResource AppIconImageSource}"
+                           Title="{x:Bind Title}"/>
+
+        <Frame x:Name="ContentFrame"
+               ContentTransitions="{StaticResource FrameContentTransitions}"
+               Grid.Row="1"/>
+
+        <ContentDialog Grid.RowSpan="2"/>
+    </Grid>
+</Window>

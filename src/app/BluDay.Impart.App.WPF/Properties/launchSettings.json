@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "BluDay.Impart.App.WPF": {
+      "commandName": "Project",
+      "commandLineArgs": "-v -b"
+    }
+  }
+}

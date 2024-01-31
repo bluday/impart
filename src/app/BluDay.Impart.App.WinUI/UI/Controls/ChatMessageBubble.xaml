@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<UserControl d:HorizontalAlignment="Left"
+             d:RequestedTheme="Dark"
+             mc:Ignorable="d"
+             x:Class="BluDay.Impart.App.WinUI.UI.Controls.ChatMessageBubble"
+             x:DefaultBindMode="OneWay"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             HorizontalAlignment="{x:Bind Side}">
+    <Grid x:Name="RootGrid"
+          Background="{ThemeResource ChatMessageBubbleBackgroundBrush}"
+          CornerRadius="{ThemeResource ControlCornerRadius}"
+          Padding="{ThemeResource ChatMessageBubblePadding}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="SideStates">
+                <VisualState x:Name="Left">
+                    <VisualState.StateTriggers>
+                        <StateTrigger IsActive="True" d:IsActive="True"/>
+                    </VisualState.StateTriggers>
+                    
+                    <VisualState.Setters>
+                        <Setter Target="RootGrid.Background" Value="{ThemeResource ChatMessageBubbleRecipientBackgroundBrush}"/>
+                    </VisualState.Setters>
+                </VisualState>
+                
+                <VisualState x:Name="Right"/>
+            </VisualStateGroup>    
+        </VisualStateManager.VisualStateGroups>
+
+        <RichTextBlock x:Name="ContentEditTextBlock"
+                       Foreground="{ThemeResource ChatMessageBubbleTextBrush}"
+                       TextTrimming="CharacterEllipsis"
+                       TextWrapping="WrapWholeWords"
+                       FontSize="12">
+            <Paragraph>
+                <Run Text="{x:Bind Text}" d:Text="Impart 🫐"/>
+            </Paragraph>
+        </RichTextBlock>
+    </Grid>
+</UserControl>
