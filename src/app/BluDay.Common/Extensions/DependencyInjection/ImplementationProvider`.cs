@@ -22,7 +22,7 @@ public class ImplementationProvider<TService> : IImplementationProvider<TService
         _serviceProvider = serviceProvider;
     }
 
-    private object CreateInstance(IObjectFactorySite site)
+    private object CreateInstance([DisallowNull] IObjectFactorySite site)
     {
         return site.Factory.Invoke(_serviceProvider, arguments: null);
     }
