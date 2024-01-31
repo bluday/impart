@@ -2,5 +2,5 @@
 
 public sealed class UseViewModelAttribute<TViewModel> : Attribute where TViewModel : IViewModel
 {
-    // ( 0 _ o )
+    public static Type TargetType { get; } = typeof(TViewModel);
 }
