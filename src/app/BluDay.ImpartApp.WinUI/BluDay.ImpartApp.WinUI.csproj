@@ -14,6 +14,10 @@
     <PackageCertificateThumbprint>D131A9BC804E72B025DDF3324E1CC6239768AF33</PackageCertificateThumbprint>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <Title>Impart (WinUI)</Title>
+    <Copyright>© BluDay 2024</Copyright>
+    <Description>Developed by BluDay.</Description>
+    <RepositoryUrl>https://github.com/BluDay/Impart</RepositoryUrl>
   </PropertyGroup>
 
   <ItemGroup>

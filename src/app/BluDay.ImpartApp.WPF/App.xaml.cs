@@ -5,5 +5,12 @@
 /// </summary>
 public sealed partial class App : Application
 {
-    // ( 0 _ o )
+    private IImpartApp? _app;
+
+    private void Application_Startup(object sender, StartupEventArgs e)
+    {
+        _app = new ImpartApp(args: null!);
+
+        _app.Initialize();
+    }
 }
