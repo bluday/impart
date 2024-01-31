@@ -2,7 +2,7 @@
 
 public static class TypeExtensions
 {
-    public static bool IsImplementationType(this Type source, [DisallowNull] Type serviceType)
+    public static bool IsImplementationType(this Type source, Type serviceType)
     {
         return source != serviceType
             && source.IsClass

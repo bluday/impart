@@ -2,7 +2,6 @@
 
 public sealed class UserModel : Model
 {
-    [DisallowNull]
     [Required]
     [MaxLength(1024)]
     [MinLength(1)]

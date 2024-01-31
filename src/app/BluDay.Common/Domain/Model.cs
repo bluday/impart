@@ -20,7 +20,7 @@ public abstract class Model : IModel, IEquatable<Model>, IEqualityComparer<Model
         return EqualityComparer<Model>.Default.Equals(x, y);
     }
 
-    public int GetHashCode([DisallowNull] Model obj)
+    public int GetHashCode(Model obj)
     {
         return obj.GetHashCode() ^ obj.Id.GetHashCode();
     }
