@@ -8,7 +8,9 @@ public class ImplementationProvider<TService> : IImplementationProvider<TService
 
     private static readonly IReadOnlyDictionary<Type, IObjectFactorySite> _objectFactorySiteMap;
 
-    public Type ServiceType => _serviceType;
+    public static Type ServiceType => _serviceType;
+
+    Type IImplementationProvider.ServiceType => _serviceType;
 
     static ImplementationProvider()
     {
@@ -39,13 +41,6 @@ public class ImplementationProvider<TService> : IImplementationProvider<TService
             .AsReadOnly();
     }
 
-    public TImplementation GetInstance<TImplementation>() where TImplementation : TService, new()
-    {
-        IObjectFactorySite site = _objectFactorySiteMap[typeof(TImplementation)];
-
-        return (TImplementation)CreateInstance(site);
-    }
-
     public object GetInstance(Type implementationType)
     {
         if (!implementationType.IsAssignableTo(_serviceType))
@@ -56,5 +51,12 @@ public class ImplementationProvider<TService> : IImplementationProvider<TService
         IObjectFactorySite site = _objectFactorySiteMap[implementationType];
 
         return CreateInstance(site);
+    }
+
+    public TImplementation GetInstance<TImplementation>() where TImplementation : TService, new()
+    {
+        IObjectFactorySite site = _objectFactorySiteMap[typeof(TImplementation)];
+
+        return (TImplementation)CreateInstance(site);
     }
 }
