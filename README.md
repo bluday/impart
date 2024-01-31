@@ -1,8 +1,6 @@
-# Impart
+# impart-app
 
-Multi-purpose WinUI 3 chat app.
-
-Project status: Active
+Simple and multi-purpose chat application for various platforms.
 
 ### Screenshots (of the old UWP app):
 
