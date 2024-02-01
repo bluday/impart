@@ -1,4 +1,4 @@
-﻿namespace BluDay.Impart.App.UI.WindowManagement;
+﻿namespace BluDay.Common.UI.WindowManagement;
 
 public interface IWindowService : IDisposable
 {

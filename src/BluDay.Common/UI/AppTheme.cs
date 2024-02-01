@@ -1,3 +1,3 @@
-namespace BluDay.Impart.App.UI;
+namespace BluDay.Common.UI;
 
 public enum AppTheme { System, Light, Dark };

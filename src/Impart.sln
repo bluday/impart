@@ -47,7 +47,11 @@ Global
 		SolutionGuid = {C75B2FC9-A9F7-493C-9A65-0FD6A84DBA92}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		BluDay.Common\BluDay.Common.projitems*{0e1a4031-0ea7-425c-9871-f61c58666cd3}*SharedItemsImports = 128
-		BluDay.Impart.App\BluDay.Impart.App.projitems*{be650113-8010-4a08-bb99-b3ea6fd1c12c}*SharedItemsImports = 128
+		BluDay.Common\BluDay.Common.projitems*{0c968c02-4347-46d8-9da7-f832b3f60652}*SharedItemsImports = 5
+		BluDay.Impart.App\BluDay.Impart.App.projitems*{0c968c02-4347-46d8-9da7-f832b3f60652}*SharedItemsImports = 5
+		BluDay.Common\BluDay.Common.projitems*{0e1a4031-0ea7-425c-9871-f61c58666cd3}*SharedItemsImports = 13
+		BluDay.Common\BluDay.Common.projitems*{771235f8-471c-41cc-b895-ed5c97503c88}*SharedItemsImports = 5
+		BluDay.Impart.App\BluDay.Impart.App.projitems*{771235f8-471c-41cc-b895-ed5c97503c88}*SharedItemsImports = 5
+		BluDay.Impart.App\BluDay.Impart.App.projitems*{be650113-8010-4a08-bb99-b3ea6fd1c12c}*SharedItemsImports = 13
 	EndGlobalSection
 EndGlobal

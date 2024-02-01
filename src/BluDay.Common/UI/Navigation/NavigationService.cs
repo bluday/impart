@@ -1,4 +1,4 @@
-namespace BluDay.Impart.App.UI.Navigation;
+namespace BluDay.Common.UI.Navigation;
 
 public sealed class NavigationService : INavigationService
 {

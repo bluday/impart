@@ -28,9 +28,9 @@ internal sealed class ImpartAppContainer : IDisposable
     {
         return new ServiceCollection()
             .AddSingleton<IMessenger>(WeakReferenceMessenger.Default)
-            .AddSingleton<IThemeService,      ThemeService>()
             .AddSingleton<IDialogService,     DialogService>()
             .AddSingleton<INavigationService, NavigationService>()
+            .AddSingleton<IThemeService,      ThemeService>()
             .AddSingleton<IWindowService,     WindowService>()
             .AddSingleton<IViewModelProvider, ViewModelProvider>();
     }

@@ -1,4 +1,4 @@
-namespace BluDay.Impart.App.UI;
+namespace BluDay.Common.UI;
 
 public sealed class ThemeService : IThemeService
 {
