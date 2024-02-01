@@ -1,3 +1,3 @@
-﻿namespace BluDay.Impart.App.Core.Domain.ViewModels;
+﻿namespace BluDay.Impart.App.Domain.ViewModels;
 
 public sealed partial class SettingsViewModel : ViewModel { }

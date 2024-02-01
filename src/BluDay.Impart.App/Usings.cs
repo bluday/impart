@@ -1,7 +1,7 @@
 ﻿global using BluDay.Common.Domain.Models;
 global using BluDay.Common.Domain.ViewModels;
-global using BluDay.Impart.App.Core.Domain.Models;
-global using BluDay.Impart.App.Core.Domain.ViewModels;
+global using BluDay.Impart.App.Domain.Models;
+global using BluDay.Impart.App.Domain.ViewModels;
 global using BluDay.Common.UI;
 global using BluDay.Common.UI.Interactions;
 global using BluDay.Common.UI.Navigation;

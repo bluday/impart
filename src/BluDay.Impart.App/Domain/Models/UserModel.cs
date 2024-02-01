@@ -1,4 +1,4 @@
-﻿namespace BluDay.Impart.App.Core.Domain.Models;
+﻿namespace BluDay.Impart.App.Domain.Models;
 
 public sealed class UserModel : Model
 {
