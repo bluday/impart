@@ -1,7 +1,7 @@
 {
   "profiles": {
     "WinUI": {
-      "commandName": "Project"
+      "commandName": "MsixPackage"
     }
   }
 }
