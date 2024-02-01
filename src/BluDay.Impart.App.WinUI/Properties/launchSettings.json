@@ -1,9 +1,6 @@
 {
   "profiles": {
-    "BluDay.Impart.App.WinUI (Package)": {
-      "commandName": "MsixPackage"
-    },
-    "BluDay.Impart.App.WinUI (Unpackaged)": {
+    "WinUI": {
       "commandName": "Project"
     }
   }
