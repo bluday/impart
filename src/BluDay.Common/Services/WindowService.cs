@@ -37,9 +37,4 @@ public sealed class WindowService : IWindowService
     {
         return _windows.Contains(window);
     }
-
-    public void Dispose()
-    {
-        throw new NotImplementedException();
-    }
 }

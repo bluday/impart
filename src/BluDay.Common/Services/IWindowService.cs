@@ -1,6 +1,6 @@
 ﻿namespace BluDay.Common.Services;
 
-public interface IWindowService : IDisposable
+public interface IWindowService
 {
     IWindow? MainWindow { get; }
 
