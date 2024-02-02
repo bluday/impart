@@ -28,10 +28,10 @@ internal sealed class ImpartAppContainer : IDisposable
     {
         return new ServiceCollection()
             .AddSingleton<IMessenger>(WeakReferenceMessenger.Default)
-            .AddSingleton<IAppDialogService,     AppDialogService>()
+            .AddSingleton<IAppDialogService, AppDialogService>()
             .AddSingleton<IAppNavigationService, AppNavigationService>()
-            .AddSingleton<IAppThemeService,      AppThemeService>()
-            .AddSingleton<IAppWindowService,     AppWindowService>()
+            .AddSingleton<IAppThemeService, AppThemeService>()
+            .AddSingleton<IAppWindowService, AppWindowService>()
             .AddSingleton<IViewModelProvider, ViewModelProvider>();
     }
 
