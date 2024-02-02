@@ -9,6 +9,14 @@
     <Import_RootNamespace>BluDay.Impart.App</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)\**\*.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\Models\UserModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModels\ConversationsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModels\IntroductionViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModels\MainViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModels\SettingsViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IImpartApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImpartApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImpartAppContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Usings.cs" />
   </ItemGroup>
 </Project>
