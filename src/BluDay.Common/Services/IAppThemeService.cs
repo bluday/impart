@@ -1,6 +1,6 @@
 namespace BluDay.Common.Services;
 
-public interface IThemeService
+public interface IAppThemeService
 {
     AppTheme CurrentTheme { get; set; }
 }

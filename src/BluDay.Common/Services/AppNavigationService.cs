@@ -1,6 +1,6 @@
 namespace BluDay.Common.Services;
 
-public sealed class NavigationService : INavigationService
+public sealed class AppNavigationService : IAppNavigationService
 {
     private readonly Dictionary<Guid, INavigator> _navigatorMap = new();
 

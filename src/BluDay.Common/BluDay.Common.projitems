@@ -27,16 +27,16 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\AppTheme.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\DialogService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IDialogService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IThemeService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\INavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AppDialogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IAppDialogService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IAppThemeService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IAppNavigationService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\Navigation\INavigator.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\NavigationService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\ThemeService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AppNavigationService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AppThemeService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\WindowManagement\IWindow.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\IWindowService.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Services\WindowService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\IAppWindowService.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\AppWindowService.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />

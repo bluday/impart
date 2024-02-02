@@ -1,8 +1,8 @@
 ﻿namespace BluDay.Common.Services;
 
-public sealed class WindowService : IWindowService
+public sealed class AppWindowService : IAppWindowService
 {
-    private readonly INavigationService _navigationService;
+    private readonly IAppNavigationService _navigationService;
 
     private readonly HashSet<IWindow> _windows = new();
 
@@ -15,7 +15,7 @@ public sealed class WindowService : IWindowService
         get => _windows.ToList().AsReadOnly();
     }
 
-    public WindowService(INavigationService navigationService)
+    public AppWindowService(IAppNavigationService navigationService)
     {
         _navigationService = navigationService;
     }

@@ -1,6 +1,6 @@
 ﻿namespace BluDay.Common.Services;
 
-public interface IWindowService
+public interface IAppWindowService
 {
     IWindow? MainWindow { get; }
 

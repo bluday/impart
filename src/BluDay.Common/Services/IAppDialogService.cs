@@ -1,3 +1,3 @@
 ﻿namespace BluDay.Common.Services;
 
-public interface IDialogService { }
+public interface IAppDialogService { }

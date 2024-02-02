@@ -1,6 +1,6 @@
 namespace BluDay.Common.Services;
 
-public interface INavigationService
+public interface IAppNavigationService
 {
     IReadOnlyDictionary<Guid, INavigator> NavigatorMap { get; }
 
