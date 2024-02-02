@@ -1,11 +1,11 @@
 ﻿global using BluDay.Common.Domain.Models;
 global using BluDay.Common.Domain.ViewModels;
-global using BluDay.Impart.App.Domain.Models;
-global using BluDay.Impart.App.Domain.ViewModels;
+global using BluDay.Common.Services;
 global using BluDay.Common.UI;
-global using BluDay.Common.UI.Interactions;
 global using BluDay.Common.UI.Navigation;
 global using BluDay.Common.UI.WindowManagement;
+global using BluDay.Impart.App.Domain.Models;
+global using BluDay.Impart.App.Domain.ViewModels;
 global using CommunityToolkit.Mvvm.ComponentModel;
 global using CommunityToolkit.Mvvm.Messaging;
 global using System.ComponentModel.DataAnnotations;

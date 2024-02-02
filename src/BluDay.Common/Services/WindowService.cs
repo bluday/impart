@@ -1,4 +1,4 @@
-﻿namespace BluDay.Common.UI.WindowManagement;
+﻿namespace BluDay.Common.Services;
 
 public sealed class WindowService : IWindowService
 {

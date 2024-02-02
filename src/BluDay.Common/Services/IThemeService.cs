@@ -1,4 +1,4 @@
-namespace BluDay.Common.UI;
+namespace BluDay.Common.Services;
 
 public interface IThemeService
 {

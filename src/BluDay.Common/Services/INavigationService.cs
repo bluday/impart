@@ -1,4 +1,4 @@
-namespace BluDay.Common.UI.Navigation;
+namespace BluDay.Common.Services;
 
 public interface INavigationService
 {

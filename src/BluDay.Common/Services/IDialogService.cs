@@ -1,4 +1,4 @@
-﻿namespace BluDay.Common.UI.Interactions;
+﻿namespace BluDay.Common.Services;
 
 public interface IDialogService : IDisposable
 {
