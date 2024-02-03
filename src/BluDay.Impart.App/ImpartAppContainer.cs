@@ -35,13 +35,6 @@ internal sealed class ImpartAppContainer : IDisposable
             .AddSingleton<IViewModelProvider, ViewModelProvider>();
     }
 
-    public void InitializeCoreServices()
-    {
-        _serviceProvider
-            .GetRequiredService<IAppWindowService>()
-            .CreateWindow();
-    }
-
     public void Dispose()
     {
         throw new NotImplementedException();

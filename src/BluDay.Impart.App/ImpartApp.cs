@@ -19,11 +19,18 @@ public sealed class ImpartApp : IImpartApp
         _container = new(app: this);
     }
 
+    public void InitializeCoreServices()
+    {
+        _container.ServiceProvider
+            .GetRequiredService<IAppWindowService>()
+            .CreateWindow();
+    }
+
     public void Initialize()
     {
         if (IsInitialized) return;
 
-        _container.InitializeCoreServices();
+        InitializeCoreServices();
 
         IsInitialized = true;
     }
