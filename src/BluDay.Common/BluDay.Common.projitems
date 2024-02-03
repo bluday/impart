@@ -9,7 +9,8 @@
     <Import_RootNamespace>BluDay.Common</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)attributes\AppArgumentAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Attributes\CommandLineArgsAttribute.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)attributes\CommandLineArgAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\NotEmptyOrWhiteSpaceAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\UseViewModelAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />

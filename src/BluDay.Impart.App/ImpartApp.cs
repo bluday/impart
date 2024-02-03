@@ -14,7 +14,7 @@ public sealed class ImpartApp : IImpartApp
 
     public ImpartApp(string[] args)
     {
-        _args = new(); // Temporary.
+        _args = new();
 
         _container = new(app: this);
     }
