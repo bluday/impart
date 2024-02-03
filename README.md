@@ -1,4 +1,4 @@
-# impart-app
+# impart
 
 Simple and multi-purpose chat application for various platforms.
 
