@@ -1,5 +1,6 @@
 ﻿global using BluDay.Common.Domain.Models;
 global using BluDay.Common.Domain.ViewModels;
+global using BluDay.Common.Helpers;
 global using BluDay.Common.Services;
 global using BluDay.Common.UI;
 global using BluDay.Common.UI.Navigation;
