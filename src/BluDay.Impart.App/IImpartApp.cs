@@ -2,11 +2,11 @@ namespace BluDay.Impart.App;
 
 public interface IImpartApp : IDisposable
 {
+    ImpartAppArgs Args { get; }
+
     bool IsDisposed { get; }
 
     bool IsInitialized { get; }
-
-    IReadOnlyList<string> Arguments { get; }
 
     void Initialize();
 }

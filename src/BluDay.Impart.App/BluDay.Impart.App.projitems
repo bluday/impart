@@ -16,6 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModels\SettingsViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)IImpartApp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImpartApp.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ImpartAppArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ImpartAppContainer.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Usings.cs" />
   </ItemGroup>
