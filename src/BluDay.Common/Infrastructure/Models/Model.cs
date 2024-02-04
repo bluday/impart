@@ -1,4 +1,4 @@
-﻿namespace BluDay.Common.Domain.Models;
+﻿namespace BluDay.Common.Infrastructure.Models;
 
 public abstract class Model : IModel, IEquatable<Model>, IEqualityComparer<Model>
 {

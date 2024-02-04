@@ -1,23 +1,36 @@
 namespace BluDay.Common.Attributes;
 
-public sealed class CommandLineArgAttribute : Attribute
+public sealed class CommandLineArgumentAttribute : Attribute
 {
-    public bool Required { get; init; }
+    public ArgumentActionType ActionType { get; }
 
-    public int ValueCount { get; init; }
+    public bool Required { get; }
 
-    public string Arg { get; }
+    public object? Constant { get; }
+
+    public string Argument { get; }
     
-    public string? Description { get; init; }
+    public string? Description { get; }
 
-    public IReadOnlyList<string> Aliases { get; init; }
+    public IReadOnlyList<string> Identifiers { get; }
 
-    public CommandLineArgAttribute(string arg, params string[] aliases)
+    public CommandLineArgumentAttribute(
+        string[]           identifiers,
+        bool               required    = false,
+        ArgumentActionType actionType  = ArgumentActionType.ParseArg,
+        object?            constant    = null,
+        string?            description = null)
     {
-        ArgumentException.ThrowIfNullOrWhiteSpace(arg);
+        ActionType = actionType;
 
-        Arg = arg;
+        Required = required;
 
-        Aliases = aliases ?? Array.Empty<string>();
+        Constant = constant;
+
+        Argument = identifiers[0];
+
+        Description = description;
+
+        Identifiers = identifiers ?? Array.Empty<string>();
     }
 }

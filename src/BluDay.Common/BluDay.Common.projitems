@@ -9,15 +9,15 @@
     <Import_RootNamespace>BluDay.Common</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Attributes\CommandLineArgsAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)attributes\CommandLineArgAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\NotEmptyOrWhiteSpaceAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\UseViewModelAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Domain\Models\IModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Domain\Models\Model.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModels\IViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Domain\ViewModels\ViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ArgumentActionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\Models\IModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\Models\Model.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\ViewModels\IViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\ViewModels\ViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\IImplementationProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\IImplementationProvider`.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\ImplementationProvider`.cs" />
@@ -28,6 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\ObjectFactorySite`.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtensions.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)helpers\ArgumentsParser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\AppTheme.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AppDialogService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IAppDialogService.cs" />
@@ -41,6 +42,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\AppWindowService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Infrastructure\ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)UI\Interactions\" />
   </ItemGroup>
