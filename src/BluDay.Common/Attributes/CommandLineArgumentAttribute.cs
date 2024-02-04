@@ -16,9 +16,9 @@ public sealed class CommandLineArgumentAttribute : Attribute
 
     public CommandLineArgumentAttribute(
         string[]           identifiers,
-        bool               required    = false,
         ArgumentActionType actionType  = ArgumentActionType.ParseArg,
         object?            constant    = null,
+        bool               required    = false,
         string?            description = null)
     {
         ActionType = actionType;
