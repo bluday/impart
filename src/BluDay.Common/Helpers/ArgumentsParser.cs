@@ -4,9 +4,18 @@ namespace BluDay.Common.Helpers;
 
 public static class ArgumentsParser
 {
+    public static BindingFlags PropertyBindingFlags { get; }
+
+    static ArgumentsParser()
+    {
+        PropertyBindingFlags = BindingFlags.Instance
+            | BindingFlags.DeclaredOnly
+            | BindingFlags.Public;
+    }
+
     public static TOptions Parse<TOptions>(string args) where TOptions : new()
     {
-        return Parse<TOptions>(args.Split(Constants.Whitespace));
+        return Parse<TOptions>(args: args.Split(Constants.Whitespace));
     }
 
     public static TOptions Parse<TOptions>(params string[] args) where TOptions : new()
@@ -15,21 +24,17 @@ public static class ArgumentsParser
 
         object? options = Activator.CreateInstance(optionsType);
 
-        var flags = BindingFlags.Instance
-            | BindingFlags.DeclaredOnly
-            | BindingFlags.Public;
+        PropertyInfo[] properties = optionsType.GetProperties(PropertyBindingFlags);
 
-        foreach (PropertyInfo property in optionsType.GetProperties(flags))
+        foreach (var property in properties)
         {
-            var attribute = property.GetCustomAttribute<CommandLineArgAttribute>();
+            var attribute = property.GetCustomAttribute<CommandLineArgumentAttribute>();
 
             if (attribute is null) continue;
 
             for (int index = 0; index < args.Length; index++)
             {
-                string argument = args[index];
-
-
+                // ( 0 _ o )
             }
         }
 

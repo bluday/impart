@@ -2,6 +2,9 @@ namespace BluDay.Impart.App;
 
 public sealed class ImpartAppArgs
 {
+    [CommandLineArgument(["-t", "--theme"], actionType: ArgumentActionType.ParseValue)]
+    public AppTheme? AppTheme { get; init; }
+
     [CommandLineArgument(["-d", "--demo"])]
     public bool? DemoMode { get; init; }
 
@@ -13,7 +16,4 @@ public sealed class ImpartAppArgs
         )
     ]
     public int Verbosity { get; init; }
-
-    [CommandLineArgument(["-t", "--theme"], actionType: ArgumentActionType.ParseValue)]
-    public AppTheme? AppTheme { get; init; }
 }

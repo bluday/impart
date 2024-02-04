@@ -17,8 +17,6 @@ public sealed class ImpartApp : IImpartApp
         _args = args;
 
         _container = new(app: this);
-
-        System.Diagnostics.Debug.WriteLine(_args.Verbose);
     }
 
     public void InitializeCoreServices()
