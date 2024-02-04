@@ -2,11 +2,11 @@ using System.Reflection;
 
 namespace BluDay.Common.Helpers;
 
-public static class ArgumentsParser
+public static class ArgsParser
 {
     public static BindingFlags PropertyBindingFlags { get; }
 
-    static ArgumentsParser()
+    static ArgsParser()
     {
         PropertyBindingFlags = BindingFlags.Instance
             | BindingFlags.DeclaredOnly
@@ -28,7 +28,7 @@ public static class ArgumentsParser
 
         foreach (var property in properties)
         {
-            var attribute = property.GetCustomAttribute<CommandLineArgumentAttribute>();
+            var attribute = property.GetCustomAttribute<CommandLineArgAttribute>();
 
             if (attribute is null) continue;
 

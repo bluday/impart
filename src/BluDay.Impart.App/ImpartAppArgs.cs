@@ -2,15 +2,15 @@ namespace BluDay.Impart.App;
 
 public sealed class ImpartAppArgs
 {
-    [CommandLineArgument(["-t", "--theme"], actionType: ArgumentActionType.ParseValue)]
+    [CommandLineArg(["-t", "--theme"], actionType: ArgActionType.ParseValue)]
     public AppTheme AppTheme { get; init; }
 
-    [CommandLineArgument(["-d", "--demo"])]
+    [CommandLineArg(["-d", "--demo"])]
     public bool DemoMode { get; init; }
 
-    [CommandLineArgument(["--skip_intro"])]
+    [CommandLineArg(["--skip_intro"])]
     public bool SkipIntro { get; init; }
 
-    [CommandLineArgument(["-v", "--verbose"], constant: 1)]
+    [CommandLineArg(["-v", "--verbose"], constant: 1)]
     public int Verbosity { get; init; }
 }

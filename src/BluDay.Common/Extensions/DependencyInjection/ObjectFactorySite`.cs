@@ -21,9 +21,9 @@ public sealed class ObjectFactorySite<TService, TImplementation> : IObjectFactor
 
     public static ObjectFactory CreateImplicitFactory(ObjectFactory<TImplementation> factory)
     {
-        return (IServiceProvider serviceProvider, object[] arguments) =>
+        return (IServiceProvider serviceProvider, object[] args) =>
         {
-            return factory.Invoke(serviceProvider, arguments);
+            return factory.Invoke(serviceProvider, args);
         }!;
     }
 

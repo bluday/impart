@@ -13,7 +13,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\NotEmptyOrWhiteSpaceAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\UseViewModelAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ArgumentActionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ArgActionType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\Models\IModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\Models\Model.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\ViewModels\IViewModel.cs" />
@@ -28,7 +28,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\ObjectFactorySite`.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)helpers\ArgumentsParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)helpers\ArgsParser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\AppTheme.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AppDialogService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IAppDialogService.cs" />
