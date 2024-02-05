@@ -2,35 +2,34 @@ namespace BluDay.Common.Attributes;
 
 public sealed class CommandLineArgAttribute : Attribute
 {
-    public ArgActionType ActionType { get; }
+    private readonly List<string> _identifiers;
 
-    public bool Required { get; }
+    public ArgActionType ActionType { get; init; }
 
-    public object? Constant { get; }
+    public bool Required { get; init; }
+
+    public object? Constant { get; init; }
 
     public string Arg { get; }
     
-    public string? Description { get; }
+    public string? Description { get; init; }
 
-    public IReadOnlyList<string> Identifiers { get; }
+    public IReadOnlyList<string> Identifiers => _identifiers.AsReadOnly();
 
-    public CommandLineArgAttribute(
-        string[]      identifiers,
-        ArgActionType actionType  = ArgActionType.ParseArg,
-        object?       constant    = null,
-        bool          required    = false,
-        string?       description = null)
+    public CommandLineArgAttribute(string[] identifiers)
     {
-        ActionType = actionType;
+        if (identifiers is null || identifiers.Length < 1)
+        {
+            throw new ArgumentException("Identifiers collection must contain at least one element.");
+        }
 
-        Required = required;
+        _identifiers = new(identifiers);
 
-        Constant = constant;
+        Arg = _identifiers[0];
+    }
 
-        Arg = identifiers[0];
-
-        Description = description;
-
-        Identifiers = identifiers ?? Array.Empty<string>();
+    public bool HasIdentifier(string identifier)
+    {
+        return _identifiers.Contains(identifier);
     }
 }
