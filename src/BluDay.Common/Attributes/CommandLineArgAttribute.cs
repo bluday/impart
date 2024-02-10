@@ -10,7 +10,7 @@ public sealed class CommandLineArgAttribute : Attribute
 
     public object? Constant { get; init; }
 
-    public string Arg { get; }
+    public string MainIdentifier { get; }
     
     public string? Description { get; init; }
 
@@ -25,11 +25,6 @@ public sealed class CommandLineArgAttribute : Attribute
 
         _identifiers = new(identifiers);
 
-        Arg = _identifiers[0];
-    }
-
-    public bool HasIdentifier(string identifier)
-    {
-        return _identifiers.Contains(identifier);
+        MainIdentifier = _identifiers[0];
     }
 }
