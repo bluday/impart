@@ -4,7 +4,7 @@ namespace BluDay.Common.Parsing;
 
 public static class ArgsParser
 {
-    public static BindingFlags PropertyBindingFlags { get; }
+    public readonly static BindingFlags PropertyBindingFlags;
 
     static ArgsParser()
     {
