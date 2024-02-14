@@ -46,10 +46,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="UI\Styles\ChatMessageBubbleStyle.xaml" />
-    <Content Include="UI\Styles\NavigationViewStyle.xaml" />
-    <Content Include="UI\Styles\PersonPictureStyle.xaml" />
-    <Content Include="UI\Styles\UserControlStyle.xaml" />
+    <Content Include="BluDay.Impart.App.WinUI\UI\Styles\ChatMessageBubbleStyle.xaml" />
+    <Content Include="BluDay.Impart.App.WinUI\UI\Styles\NavigationViewStyle.xaml" />
+    <Content Include="BluDay.Impart.App.WinUI\UI\Styles\PersonPictureStyle.xaml" />
+    <Content Include="BluDay.Impart.App.WinUI\UI\Styles\UserControlStyle.xaml" />
   </ItemGroup>
   
   <ItemGroup>
@@ -81,6 +81,9 @@
   -->
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BluDay.Impart.App.WinUI\" />
   </ItemGroup>
   
   <!-- 

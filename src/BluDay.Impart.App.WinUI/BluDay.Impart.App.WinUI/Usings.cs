@@ -1,5 +1,4 @@
-﻿global using BluDay.Common;
-global using BluDay.Common.Attributes;
+﻿global using BluDay.Common.Attributes;
 global using BluDay.Impart.App.WinUI.Extensions;
 global using Microsoft.Extensions.DependencyInjection;
 global using Microsoft.UI;
