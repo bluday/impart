@@ -2,7 +2,7 @@
   "profiles": {
     "WPF": {
       "commandName": "Project",
-      "commandLineArgs": "-v -b"
+      "commandLineArgs": "-b -vvvv"
     }
   }
 }

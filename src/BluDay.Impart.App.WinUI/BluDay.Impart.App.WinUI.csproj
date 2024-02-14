@@ -82,9 +82,6 @@
   <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
     <ProjectCapability Include="Msix" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BluDay.Impart.App.WinUI\" />
-  </ItemGroup>
   
   <!-- 
     Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution 
