@@ -1,6 +1,6 @@
 using System.Reflection;
 
-namespace BluDay.Common.Helpers;
+namespace BluDay.Common.Parsing;
 
 public static class ArgsParser
 {
