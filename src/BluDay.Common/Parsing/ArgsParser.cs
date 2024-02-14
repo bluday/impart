@@ -20,15 +20,13 @@ public static class ArgsParser
 
     public static TOptions Parse<TOptions>(params string[] args) where TOptions : new()
     {
-        var optionsType = typeof(TOptions);
+        var options = Activator.CreateInstance<TOptions>();
 
-        object? options = Activator.CreateInstance(optionsType);
-
-        PropertyInfo[] properties = optionsType.GetProperties(PropertyBindingFlags);
+        PropertyInfo[] properties = typeof(TOptions).GetProperties(PropertyBindingFlags);
 
         foreach (var property in properties)
         {
-            var attribute = property.GetCustomAttribute<CommandLineArgAttribute>();
+            var attribute = property.GetCustomAttribute<ArgAttribute>();
 
             if (attribute is null) continue;
 
@@ -38,6 +36,6 @@ public static class ArgsParser
             }
         }
 
-        return (TOptions)options!;
+        return options;
     }
 }

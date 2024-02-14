@@ -1,10 +1,10 @@
 namespace BluDay.Common.Attributes;
 
-public sealed class CommandLineArgAttribute : Attribute
+public sealed class ArgAttribute : Attribute
 {
     public ArgInfo ArgInfo { get; }
 
-    public CommandLineArgAttribute(
+    public ArgAttribute(
         string[]      identifiers,
         ArgActionType actionType  = ArgActionType.ParseArg,
         bool          required    = false,
