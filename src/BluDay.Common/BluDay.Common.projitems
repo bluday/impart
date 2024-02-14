@@ -13,7 +13,8 @@
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\NotEmptyOrWhiteSpaceAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Attributes\UseViewModelAttribute.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Helpers\ArgActionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parsing\ArgInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parsing\ArgActionType.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\Models\IModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\Models\Model.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Infrastructure\ViewModels\IViewModel.cs" />
@@ -28,7 +29,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\DependencyInjection\ObjectFactorySite`.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\StringExtensions.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Extensions\TypeExtensions.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)helpers\ArgsParser.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Parsing\ArgsParser.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UI\AppTheme.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\AppDialogService.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\IAppDialogService.cs" />
@@ -42,7 +43,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)Services\AppWindowService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)Helpers\" />
     <Folder Include="$(MSBuildThisFileDirectory)Infrastructure\ViewModels\" />
     <Folder Include="$(MSBuildThisFileDirectory)Services\" />
     <Folder Include="$(MSBuildThisFileDirectory)UI\Interactions\" />
