@@ -1,6 +1,6 @@
-# Impart
+# impart
 
-Various app clients for Windows.
+Multi-purpose and platform-agnostic chat application with a separated core process.
 
 Screenshots of the old UWP app:
 
