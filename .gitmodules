@@ -2,5 +2,5 @@
 	path = impart-core
 	url = https://github.com/BluDay/impart-core
 [submodule "impart-app-windows"]
-	path = impart-app-windows
+	path = src/impart-app-windows
 	url = https://github.com/BluDay/impart-app-windows
