@@ -1,22 +1,53 @@
 namespace BluDay.Common.Attributes;
 
-public sealed class ArgAttribute : Attribute
+public sealed class ArgAttribute : Attribute, IArgInfo
 {
-    public ArgInfo ArgInfo { get; }
+    private object? _constant;
 
-    public ArgAttribute(
-        string[]      identifiers,
-        ArgActionType actionType  = ArgActionType.ParseArg,
-        bool          required    = false,
-        object?       constant    = null,
-        string?       description = null)
+    private readonly List<string> _identifiers;
+
+    public ArgActionType ActionType { get; init; }
+
+    public object? Constant
     {
-        ArgInfo = new(identifiers)
+        get => _constant;
+        init
         {
-            ActionType  = actionType,
-            Required    = required,
-            Constant    = constant,
-            Description = description
-        };
+            if (value is not null && value.GetType() != ValueType)
+            {
+                throw new ArgumentException($"Constant value must be of type {ValueType}.");
+            }
+
+            _constant = value;
+        }
+    }
+
+    public string MainIdentifier { get; }
+
+    public string? Description { get; init; }
+
+    public Guid Id { get; }
+
+    public Type ValueType { get; init; }
+
+    public IReadOnlyList<string> Identifiers
+    {
+        get => _identifiers.AsReadOnly();
+    }
+
+    public ArgAttribute(string[] identifiers)
+    {
+        if (identifiers.Length < 1)
+        {
+            throw new ArgumentException("Identifiers collection must contain at least one element.");
+        }
+
+        _identifiers = new(identifiers);
+
+        MainIdentifier = identifiers[0];
+
+        Id = Guid.NewGuid();
+
+        ValueType = typeof(bool);
     }
 }

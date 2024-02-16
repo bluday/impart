@@ -1,3 +1,3 @@
 namespace BluDay.Common.Parsing;
 
-public enum ArgActionType { ParseArg, ParseValue, AddConstant };
+public enum ArgActionType { ParseIdentifier, ParseValue, AddConstant };

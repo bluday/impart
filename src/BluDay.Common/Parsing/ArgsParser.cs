@@ -13,29 +13,33 @@ public static class ArgsParser
             | BindingFlags.Public;
     }
 
-    public static TOptions Parse<TOptions>(string args) where TOptions : new()
+    public static TArgs? Parse<TArgs>(string args) where TArgs : IArgs, new()
     {
-        return Parse<TOptions>(args: args.Split(Constants.Whitespace));
+        // ArgumentException.ThrowIfNullOrWhiteSpace(args);
+
+        return Parse<TArgs>(values: args.Split(Constants.Whitespace));
     }
 
-    public static TOptions Parse<TOptions>(params string[] args) where TOptions : new()
+    public static TArgs? Parse<TArgs>(params string[] values) where TArgs : IArgs, new()
     {
-        var options = Activator.CreateInstance<TOptions>();
+        if (values.Length < 1)
+        {
+            throw new ArgumentException("Argument count is less than one.");
+        }
 
-        PropertyInfo[] properties = typeof(TOptions).GetProperties(PropertyBindingFlags);
+        TArgs? args = Activator.CreateInstance<TArgs>();
+
+        PropertyInfo[] properties = typeof(TArgs).GetProperties();
 
         foreach (var property in properties)
         {
-            var attribute = property.GetCustomAttribute<ArgAttribute>();
+            IArgInfo? argInfo = property.GetCustomAttribute<ArgAttribute>();
 
-            if (attribute is null) continue;
+            if (argInfo is null) continue;
 
-            for (int index = 0; index < args.Length; index++)
-            {
-                // ( 0 _ o )
-            }
+            // TODO: Find a good and concise way to parse all args properly.
         }
 
-        return options;
+        return args;
     }
 }
