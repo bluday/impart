@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "WPF": {
-      "commandName": "Project",
-      "commandLineArgs": "-b -vvvv"
-    }
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "WinUI": {
-      "commandName": "MsixPackage",
-      "commandLineArgs": "-b -vvvv"
-    }
-  }
-}
