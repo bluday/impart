@@ -1,6 +1,6 @@
 [submodule "impart-core"]
 	path = impart-core
-	url = git@github.com:/BluDay/impart-core
+	url = https://github.com/BluDay/impart-core
 [submodule "impart-app-windows"]
 	path = impart-app-windows
-	url = git@github.com:/BluDay/impart-app-windows
+	url = https://github.com/BluDay/impart-app-windows
