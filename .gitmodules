@@ -4,3 +4,6 @@
 [submodule "impart-app-windows"]
 	path = src/impart-app-windows
 	url = https://github.com/BluDay/impart-app-windows
+[submodule "src/impart-app-windows"]
+	path = src/impart-app-windows
+	url = https://github.com/BluDay/impart-app-windows
