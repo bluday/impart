@@ -1,0 +1,141 @@
+{
+  "chats": [
+    {
+      "id": "4a0cd59e-6d8b-4f8e-addd-00f60b71a4ba",
+      "createdAt": "2023-01-17T20:00:00Z"
+    },
+    {
+      "id": "65514807-8ebb-42bb-b130-a5f779e1cf09",
+      "createdAt": "2022-04-16T20:00:00Z"
+    },
+    {
+      "id": "9d6397bd-8651-441c-8aa3-401e4e09211b",
+      "createdAt": "2019-10-31T20:00:00Z"
+    },
+    {
+      "id": "138f9a35-2a2b-40bd-b074-0b3921cb9aec",
+      "createdAt": "2018-09-23T16:51:00Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "2c80d559-6ba2-4934-9470-8d2a5d8a55e7",
+      "createdAt": "2023-01-17T20:00:00Z",
+      "content": "I need a weapon.",
+      "read": true,
+      "chatId": "4a0cd59e-6d8b-4f8e-addd-00f60b71a4ba",
+      "userId": "39d963a3-ce3f-406e-9f8d-b17f591a8532"
+    },
+    {
+      "id": "003c597e-2ee2-4786-af23-bd5cdcf454ae",
+      "createdAt": "2023-04-16T20:00:00Z",
+      "content": "Hey 💙",
+      "read": true,
+      "chatId": "65514807-8ebb-42bb-b130-a5f779e1cf09",
+      "userId": "e992d1c1-8f1e-4a79-b26a-0abb1b2c079a"
+    },
+    {
+      "id": "757fe0a2-40e6-4668-9ca1-1411ed8191d9",
+      "createdAt": "2023-04-16T20:08:00Z",
+      "content": "Hey babe 💙",
+      "read": true,
+      "chatId": "65514807-8ebb-42bb-b130-a5f779e1cf09",
+      "userId": "d09f2944-2cef-4188-aa51-47847711961b"
+    },
+    {
+      "id": "983f648d-faf5-40e3-b365-b9be87f03d1c",
+      "createdAt": "2019-10-31T20:00:00Z",
+      "content": "Hello, BluDay.",
+      "read": true,
+      "chatId": "9d6397bd-8651-441c-8aa3-401e4e09211b",
+      "userId": "d371d624-aa40-474e-ae85-4d012befa5f7"
+    },
+    {
+      "id": "b5bc2ddd-7299-41f5-bb24-48686156e791",
+      "createdAt": "2019-10-31T20:08:00Z",
+      "content": "Aiden.",
+      "read": true,
+      "chatId": "9d6397bd-8651-441c-8aa3-401e4e09211b",
+      "userId": "e992d1c1-8f1e-4a79-b26a-0abb1b2c079a"
+    },
+    {
+      "id": "48dda8ab-34ae-4982-a88e-84c8e87f61e0",
+      "createdAt": "2019-10-31T20:08:00Z",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\n\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\n\nExcepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "read": true,
+      "chatId": "9d6397bd-8651-441c-8aa3-401e4e09211b",
+      "userId": "e992d1c1-8f1e-4a79-b26a-0abb1b2c079a"
+    },
+    {
+      "id": "f337520e-91c5-4757-8f0f-76b6e0b3a925",
+      "createdAt": "2019-10-31T20:18:00Z",
+      "content": "ctOS 2.0",
+      "read": true,
+      "chatId": "9d6397bd-8651-441c-8aa3-401e4e09211b",
+      "userId": "d371d624-aa40-474e-ae85-4d012befa5f7"
+    },
+    {
+      "id": "12990a1e-74e8-42f3-8d60-48a661610994",
+      "createdAt": "2023-03-14T16:51:00Z",
+      "content": "I'm with UNATCO. Start talking.",
+      "read": true,
+      "chatId": "138f9a35-2a2b-40bd-b074-0b3921cb9aec",
+      "userId": "30ae3cff-f11d-431a-b55b-86cc4dbd20d5"
+    },
+    {
+      "id": "f337520e-91c5-4757-8f0f-76b6e0b3a925",
+      "createdAt": "2023-03-14T16:51:00Z",
+      "content": "JC Denton. 23 years old. No residence. No ancestors. No employer. No --",
+      "read": true,
+      "chatId": "138f9a35-2a2b-40bd-b074-0b3921cb9aec",
+      "userId": "e992d1c1-8f1e-4a79-b26a-0abb1b2c079a"
+    }
+  ],
+  "users": [
+    {
+      "id": "e992d1c1-8f1e-4a79-b26a-0abb1b2c079a",
+      "chatIds": [
+        "4a0cd59e-6d8b-4f8e-addd-00f60b71a4ba",
+        "65514807-8ebb-42bb-b130-a5f779e1cf09",
+        "9d6397bd-8651-441c-8aa3-401e4e09211b",
+        "138f9a35-2a2b-40bd-b074-0b3921cb9aec"
+     ],
+      "username": "BluDay",
+      "displayName": "Bachir",
+      "avatarImageUrl": "http://127.0.0.1:8000/Avatars/2019B2.png",
+      "backgroundImageUrl": "http://127.0.0.1:8000/Wallpapers/BBWallpaper1.png"
+    },
+    {
+      "id": "39d963a3-ce3f-406e-9f8d-b17f591a8532",
+      "chatIds": ["4a0cd59e-6d8b-4f8e-addd-00f60b71a4ba"],
+      "username": "john117",
+      "displayName": "Master Chief",
+      "avatarImageUrl": "https://avatarfiles.alphacoders.com/192/192584.jpg",
+      "backgroundImageUrl": "http://127.0.0.1:8000/Wallpapers/halo-3.jpg"
+    },
+    {
+      "id": "d09f2944-2cef-4188-aa51-47847711961b",
+      "username": "notaleech2016",
+      "chatIds": ["65514807-8ebb-42bb-b130-a5f779e1cf09"],
+      "displayName": "Faith Connors",
+      "avatarImageUrl": "https://avatarfiles.alphacoders.com/535/53514.jpg",
+      "backgroundImageUrl": null
+    },
+    {
+      "id": "d371d624-aa40-474e-ae85-4d012befa5f7",
+      "chatIds": ["9d6397bd-8651-441c-8aa3-401e4e09211b"],
+      "username": "TheFox",
+      "displayName": "Aiden Pearce",
+      "avatarImageUrl": "https://avatarfiles.alphacoders.com/129/129501.jpg",
+      "backgroundImageUrl": null
+    },
+    {
+      "id": "30ae3cff-f11d-431a-b55b-86cc4dbd20d5",
+      "chatIds": ["138f9a35-2a2b-40bd-b074-0b3921cb9aec"],
+      "username": "bionicman51",
+      "displayName": "JC Denton",
+      "avatarImageUrl": "https://i.imgur.com/E84gAdG.jpg",
+      "backgroundImageUrl": null
+    }
+  ]
+}
