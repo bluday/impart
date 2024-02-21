@@ -1,6 +1,6 @@
-# impart
+# Impart
 
-Multi-purpose and platform-agnostic chat program with various app implementations.
+A multi-purpose chat program with separate app clients.
 
 Screenshots of the discontinued UWP app:
 
