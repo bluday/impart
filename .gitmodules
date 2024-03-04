@@ -1,9 +1,9 @@
 [submodule "impart-app-windows"]
 	path = src/impart-app-windows
-	url = git@github.com:BluDay/impart-app-windows
+	url = https://github.com/BluDay/impart-app-windows
 [submodule "impart-core"]
 	path = src/impart-core
-	url = git@github.com:BluDay/impart-core
+	url = https://github.com/BluDay/impart-core
 [submodule "lib/BluDay.Net"]
 	path = lib/BluDay.Net
-	url = git@github.com:BluDay/BluDay.Net
+	url = https://github.com/BluDay/BluDay.Net
