@@ -4,6 +4,3 @@
 [submodule "impart-core"]
 	path = src/impart-core
 	url = https://github.com/BluDay/impart-core
-[submodule "lib/BluDay.Net"]
-	path = lib/BluDay.Net
-	url = https://github.com/BluDay/BluDay.Net
