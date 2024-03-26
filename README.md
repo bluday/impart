@@ -1,4 +1,4 @@
-# Impart
+# impart
 
 A multi-purpose chat program with separate app clients for different platforms.
 
