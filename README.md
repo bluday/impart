@@ -4,12 +4,10 @@ A multi-purpose chat program with separate app clients for different platforms.
 
 ## Supported platforms
 
+* Android (Coming soon)
 * [Windows](https://github.com/BluDay/impart-app-windows)
   - WinUI 3 (Windows App SDK)
   - WPF (Windows Presentation Foundation)
-* [React Native](https://github.com/BluDay/impart-app-react-native)
-  - Android
-  - iOS
 
 ## Proof-of-concept
 
