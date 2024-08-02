@@ -7,3 +7,6 @@
 [submodule "impart-core"]
 	path = src/impart-core
 	url = https://github.com/BluDay/impart-core.git
+[submodule "src/impart-app-react-native"]
+	path = src/impart-app-react-native
+	url = git@github.com:BluDay/impart-app-react-native
