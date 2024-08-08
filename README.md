@@ -11,7 +11,7 @@ A multi-purpose chat program with separate app clients for different platforms.
 
 ## Proof-of-concept
 
-Screenshot of the WinUI 3 client from 2024-07-27:
+Screenshot of the WinUI 3 client from 2024-08-08:
 
 <img src="/assets/screenshots/2.png?raw=true" width="800"/>
 
