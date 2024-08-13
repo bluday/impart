@@ -1,6 +1,6 @@
 # impart
 
-A multi-purpose chat program with separate app clients for different platforms.
+Multi-purpose chat application for communicating with users, servers and embedded devices across different platforms.
 
 ## Supported platforms
 
@@ -9,13 +9,13 @@ A multi-purpose chat program with separate app clients for different platforms.
   - WinUI 3 (Windows App SDK)
   - WPF (Windows Presentation Foundation)
 
-## Proof-of-concept
+## Screenshots
 
-Screenshot of the WinUI 3 client from 2024-08-08:
+WinUI 3 client from 2024-08-08 (or [_Infinity Day_](https://www.google.se/search?q=infinity+day)):
 
 <img src="/assets/screenshots/2.png?raw=true" width="800"/>
 
-Screenshots of the discontinued UWP app:
+Discontinued UWP client from 2023-01-18 (or the day after [_Spartan 117_](https://www.bing.com/images/search?q=spartan%20117)-day):
 
 <img src="/assets/screenshots/0.png?raw=true" width="650"/>
 <img src="/assets/screenshots/1.png?raw=true" width="650"/>
