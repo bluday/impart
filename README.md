@@ -1,6 +1,8 @@
-# impart
+# Impart
 
 Multi-purpose chat application for communicating with users, servers and embedded devices across different platforms.
+
+**None of the clients have any core functionality at this time.**
 
 ## Supported platforms
 
