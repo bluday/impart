@@ -13,10 +13,10 @@ Multi-purpose chat application for communicating with users, servers and embedde
 
 ## Screenshots
 
-The _WinUI 3_ client from 2024-08-08 ([_Infinity Day_](https://www.google.se/search?q=infinity+day)):
+The _WinUI 3_ client from [_Infinity Day_](https://www.google.se/search?q=infinity+day) (2024-08-08):
 
 <img src="/assets/screenshots/2.png?raw=true" width="800"/>
 
-The discontinued _UWP (Universal Windows Platform)_ client from 2023-01-18 (the day after [_Spartan 117_](https://www.bing.com/images/search?q=spartan%20117)-day):
+The discontinued _UWP (Universal Windows Platform)_ client the day after [_Spartan 117_](https://www.bing.com/images/search?q=spartan%20117)-day (2024-01-18):
 
 <img src="/assets/screenshots/0.png?raw=true" width="650"/>
