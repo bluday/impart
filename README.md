@@ -1,15 +1,14 @@
 # Impart
 
-Multi-purpose chat application for communicating with users, servers and embedded devices across different platforms.
+A multi-purpose and multi-platform chat application.
 
 **None of the clients have any core functionality at this time.**
 
 ## Supported platforms
 
-* Android (Coming soon)
-* [Windows](https://github.com/BluDay/impart-app-windows)
-  - WinUI 3 (Windows App SDK)
-  - WPF (Windows Presentation Foundation)
+* [Windows](https://github.com/bluday/impart-app-windows)
+  - WinUI 3
+  - WPF
 
 ## Screenshots
 
