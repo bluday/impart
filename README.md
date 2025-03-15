@@ -12,7 +12,7 @@ A multi-purpose and multi-platform chat application.
 
 ## Screenshots
 
-The _WinUI 3_ client from [_π-day 2025_](https://en.wikipedia.org/wiki/Pi_Day) (2025-03-14):
+The _WinUI 3_ client from [_π-day_](https://en.wikipedia.org/wiki/Pi_Day) 2025 (2025-03-14):
 
 <img src="/assets/screenshots/screenshot_0_2025-03-14.png?raw=true" width="800"/>
 <img src="/assets/screenshots/screenshot_1_2025-03-14.png?raw=true" width="800"/>
